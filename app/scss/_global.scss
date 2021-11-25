@@ -1,0 +1,139 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: $title;
+  background-color: $white;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1320px;
+  width: 100%;
+}
+
+.btn {
+  padding: 12px 24px;
+  letter-spacing: 0.03em;
+  font-size: 18px;
+  color: $white;
+  background-color: $btn;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+
+
+}
+
+.title {
+  font-family: "Ruda";
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.link-size {
+  &::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 45px;
+    z-index: 999;
+    cursor: pointer;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn-anime {
+  transition: background-color 0.2s;
+
+  &:focus {
+    box-shadow: 0 0 0 4px #E0EDCF;
+    border-radius: 6px;
+  }
+
+  &:hover {
+    background-color: #4d810c;
+  }
+
+  &:active {
+    background: #63A60E;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.5);
+
+
+  }
+
+}
+
+img {
+  object-fit: cover;
+}
+
+.anime-link {
+  transition: opacity 0.2s;
+
+  &:focus {
+    outline: 0;
+    border-radius: 3px;
+    box-shadow: 0 0 0 3px #eff6e7;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    color: #e0edcf;
+  }
+
+  &:active .simple-menu__svg {
+    fill: #e0edcf;
+  }
+}

@@ -8,4 +8,5 @@ npm-debug.*
 build/
 node_modules/
 package-lock.json
-app/
+app/css/**
+.editorconfig/
