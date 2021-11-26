@@ -12,6 +12,20 @@ let swiper = new Swiper(".main-swiper", {
 });
 
 
+
+var swiper2 = new Swiper(".mySwiper", {
+  slidesPerView: 6,
+  loop: true,
+  spaceBetween: 30,
+  freeMode: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+
 $(function () {
 
   $(".product-list__btn").on("click", function () {
@@ -48,14 +62,19 @@ $(function () {
   });
 
 
-  var mixer = mixitup('.product-card__wrapper');
-  Fancybox.bind('[data-fancybox="gallery"]', {
-    caption: function (fancybox, carousel, slide) {
-      return (
-        `${slide.index + 1} / ${carousel.slides.length} <br />` + slide.caption
-      );
-    },
-  });
+  var containerEl1 = document.querySelector('[data-ref="container-1"]');
+  var containerEl2 = document.querySelector('[data-ref="container-2"]');
+
+  var config = {
+    controls: {
+      scope: 'local'
+    }
+  };
+
+  var mixer1 = mixitup(containerEl1, config);
+  var mixer1 = mixitup(containerEl2, config);
+
+
 
 
 });

@@ -235,32 +235,32 @@
       </div>
     </div>
 
-    <section class="top-products">
+    <section class="top-products" data-ref="container-1">
       <div class="container">
         <h4 class="title">Топовые товары</h4>
         <ul class="filter">
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter="all">
+            <button class="filter__btn filter" type="button" data-filter="all">
               все товары
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".fruit">
+            <button class="filter__btn filter" type="button" data-filter=".fruit">
               фрукты
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".vegetables">
+            <button class="filter__btn filter" type="button" data-filter=".vegetables">
               овощи
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".drinks">
+            <button class="filter__btn filter" type="button" data-filter=".drinks">
               напитки
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".grocery">
+            <button class="filter__btn filter" type="button" data-filter=".grocery">
               бакалея
             </button>
           </li>
@@ -268,13 +268,13 @@
 
         <div class="product-card">
           <div class="container product-card__container">
-            <ul class="product-card__wrapper">
+            <ul class="product-card__wrapper" id="container">
               <li class="product-card__item mix fruit">
                 <article class="cart">
                   <div class="cart__wrapper">
                     <div class="cart__header">
                       <div class="cart__sale-box">
-                        <span class="cart__sale-hit">новинка</span>
+                        <span class="cart-hit cart__sale-hit ">новинка</span>
                         <span class="cart__sale">-50%</span>
                       </div>
                       <button class="cart__heart" type="button">
@@ -560,28 +560,284 @@
       </div>
     </section>
 
-    <section class="stock">
+    <div class="banner">
+      <div class="container">
+        <ul class="banner__wrapper">
+          <li class="banner__item banner__item--big" style="background-image: url(images/bg/fruits1.jpg);">
+            <span class="banner__text banner__text--big">свежайшие фрукты</span>
+            <h5 class="banner__title banner__title--big">начни фруктовое лето всего от 99 ₽</h5>
+            <a class="banner__link banner__link--big link-size" href="#">перейти к покупкам</a>
+          </li>
+          <li class="banner__item" style="background-image: url(images/bg/veg.jpg);">
+            <span class="banner__text">СЕЗОННАЯ РАСПРОДАЖА</span>
+            <h5 class="banner__title">ОВОЩЕПАД
+              ДО -50% </h5>
+            <a class="banner__link link-size" href="#">перейти к покупкам</a>
+          </li>
+          <li class="banner__item" style="background-image: url(images/bg/bread.jpg);">
+            <span class="banner__text">НЯМ-НЯМ</span>
+            <h5 class="banner__title">СВЕЖИЙ
+              ХЛЕБЧИК</h5>
+            <a class="banner__link link-size" href="#">перейти к покупкам</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <section class="promo" data-ref="container-2">
       <div class="container">
         <h4 class="title">Акции</h4>
         <ul class="filter">
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter="">
+            <button class="filter__btn filter2" type="button" data-filter="all">
               все товары
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter="">
+            <button class="filter__btn filter2" type="button" data-filter=".new ">
               новинки
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter="">
+            <button class="filter__btn filter2" type="button" data-filter=".hits">
               хиты
             </button>
           </li>
         </ul>
+        <ul class="promo__cards" data-ref="container-2">
+          <li class="promo__list  mix new">
+            <article class="promo-cart">
+              <span class="promo-cart__sale-hit">новинка</span>
+              <a href="">
+                <img class="promo-cart__img" src="images/carts/pineapple.png" width="100" height="100" alt="">
+              </a>
+              <div class="promo-cart__box">
+                <h6 class="promo-cart__title">Ананас, 1 кг</h6>
+                <div class="promo-cart__price">
+                  <span class="promo-cart__info">В НАЛИЧИИ</span>
+                  <span class="promo-cart__price-old">1999 ₽ </span>
+                  <span class="promo-cart__price-new">999 ₽ </span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="promo__list mix new">
+            <article class="promo-cart">
+              <span class="promo-cart__sale-hit">новинка</span>
+              <a href="">
+                <img class="promo-cart__img" src="images/carts/pineapple.png" width="100" height="100" alt="">
+              </a>
+              <div class="promo-cart__box">
+                <h6 class="promo-cart__title">Ананас, 1 кг</h6>
+                <div class="promo-cart__price">
+                  <span class="promo-cart__info">В НАЛИЧИИ</span>
+                  <span class="promo-cart__price-old">1999 ₽ </span>
+                  <span class="promo-cart__price-new">999 ₽ </span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="promo__list mix hits">
+            <article class="promo-cart">
+              <span class="promo-cart__sale-hit">новинка</span>
+              <a href="">
+                <img class="promo-cart__img" src="images/carts/pineapple.png" width="100" height="100" alt="">
+              </a>
+              <div class="promo-cart__box">
+                <h6 class="promo-cart__title">Ананас, 1 кг</h6>
+                <div class="promo-cart__price">
+                  <span class="promo-cart__info">В НАЛИЧИИ</span>
+                  <span class="promo-cart__price-old">1999 ₽ </span>
+                  <span class="promo-cart__price-new">999 ₽ </span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="promo__list mix hits">
+            <article class="promo-cart">
+              <span class="promo-cart__sale-hit">новинка</span>
+              <a href="">
+                <img class="promo-cart__img" src="images/carts/pineapple.png" width="100" height="100" alt="">
+              </a>
+              <div class="promo-cart__box">
+                <h6 class="promo-cart__title">Ананас, 1 кг</h6>
+                <div class="promo-cart__price">
+                  <span class="promo-cart__info">В НАЛИЧИИ</span>
+                  <span class="promo-cart__price-old">1999 ₽ </span>
+                  <span class="promo-cart__price-new">999 ₽ </span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="promo__list mix new">
+            <article class="promo-cart">
+              <span class="promo-cart__sale-hit">новинка</span>
+              <a href="">
+                <img class="promo-cart__img" src="images/carts/pineapple.png" width="100" height="100" alt="">
+              </a>
+              <div class="promo-cart__box">
+                <h6 class="promo-cart__title">Ананас, 1 кг</h6>
+                <div class="promo-cart__price">
+                  <span class="promo-cart__info">В НАЛИЧИИ</span>
+                  <span class="promo-cart__price-old">1999 ₽ </span>
+                  <span class="promo-cart__price-new">999 ₽ </span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="promo__list mix new">
+            <article class="promo-cart">
+              <span class="promo-cart__sale-hit">новинка</span>
+              <a href="">
+                <img class="promo-cart__img" src="images/carts/pineapple.png" width="100" height="100" alt="">
+              </a>
+              <div class="promo-cart__box">
+                <h6 class="promo-cart__title">Ананас, 1 кг</h6>
+                <div class="promo-cart__price">
+                  <span class="promo-cart__info">В НАЛИЧИИ</span>
+                  <span class="promo-cart__price-old">1999 ₽ </span>
+                  <span class="promo-cart__price-new">999 ₽ </span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="promo__list mix new">
+            <article class="promo-cart">
+              <span class="promo-cart__sale-hit">новинка</span>
+              <a href="">
+                <img class="promo-cart__img" src="images/carts/pineapple.png" width="100" height="100" alt="">
+              </a>
+              <div class="promo-cart__box">
+                <h6 class="promo-cart__title">Ананас, 1 кг</h6>
+                <div class="promo-cart__price">
+                  <span class="promo-cart__info">В НАЛИЧИИ</span>
+                  <span class="promo-cart__price-old">1999 ₽ </span>
+                  <span class="promo-cart__price-new">999 ₽ </span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="promo__list mix new">
+            <article class="promo-cart">
+              <span class="promo-cart__sale-hit">новинка</span>
+              <a href="">
+                <img class="promo-cart__img" src="images/carts/pineapple.png" width="100" height="100" alt="">
+              </a>
+              <div class="promo-cart__box">
+                <h6 class="promo-cart__title">Ананас, 1 кг</h6>
+                <div class="promo-cart__price">
+                  <span class="promo-cart__info">В НАЛИЧИИ</span>
+                  <span class="promo-cart__price-old">1999 ₽ </span>
+                  <span class="promo-cart__price-new">999 ₽ </span>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <button class="promo__btn btn btn-anime">Показать еще</button>
       </div>
     </section>
+
+
+    <div class="container container-swiper ">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide">
+            <a class="swiper-link" href="#">
+              <img class="swiper-img" src="./images/slide/cocacola.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide slide">
+            <a class="swiper-link" href="#">
+              <img class="swiper-img" src="./images/slide/dr-pepper-4.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide slide">
+            <a class="swiper-link" href="#">
+              <img class="swiper-img" src="./images/slide/fanta.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide slide">
+            <a class="swiper-link" href="#">
+              <img class="swiper-img" src="./images/slide/pepsi.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide slide">
+            <a class="swiper-link" href="#">
+              <img class="swiper-img" src="./images/slide/redbull.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide slide">
+            <a class="swiper-link" href="#">
+              <img class="swiper-img" src="./images/slide/Sprite.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide slide">
+            <a class="swiper-link" href="#">
+              <img class="swiper-img" src="./images/slide/cocacola.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide slide">
+            <a class="swiper-link" href="#">
+              <img class="swiper-img" src="./images/slide/dr-pepper-4.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide slide">
+            <a class="swiper-link" href="#">
+              <img class="swiper-img" src="./images/slide/fanta.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <section class="news">
+      <div class="container">
+        <div class="news__box">
+          <h4 class="news__title title">НАШИ НОВОСТИ</h4>
+          <a class="news__link" href="#">все новости</a>
+        </div>
+
+        <ul class="news__list">
+          <li class="news__item">
+            <div class="news__date-box">
+              <span class="news__month">июль</span>
+              <span class="news__date">15</span>
+            </div>
+            <img src="./images/bg/images.jpg" alt="">
+            <p>
+              Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не
+              разобрали!
+            </p>
+          </li>
+          <li class="news__item">
+            <div class="news__date-box">
+              <span class="news__month">июль</span>
+              <span class="news__date">15</span>
+            </div>
+            <img src="./images/bg/images1.jpg" alt="">
+            <p>
+              Шикарнейший выбор манго в нашем онлайн-маркете
+            </p>
+          </li>
+          <li class="news__item">
+            <div class="news__date-box">
+              <span class="news__month">июль</span>
+              <span class="news__date">15</span>
+            </div>
+            <img src="./images/bg/images2.jpg" alt="">
+            <p>
+              Всё, что вы хотели знать о папайя
+            </p>
+          </li>
+        </ul>
+      </div>
+
+
+    </section>
+
   </main>
 
   <footer class="footer">
