@@ -37,7 +37,7 @@ $(function () {
 
   $(".navbar__link, .cart__basket-img").on("click", function () {
     $('.basket').toggleClass("basket--active");
-    $('.product-list__btn').toggleClass("product-list__btn--active");
+
   });
 
   $(".basket__btn-close ").on("click", function () {
@@ -86,5 +86,15 @@ $(function () {
 
 
 
+
+});
+
+$(function () {
+
+  $(".star").rateYo({
+    numStars: 1,
+    ratedFill: "#FFB800",
+    starWidth: "16px"
+  });
 
 });

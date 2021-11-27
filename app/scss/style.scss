@@ -1066,8 +1066,9 @@
 .promo-cart {
   position: relative;
   display: flex;
-  padding: 13px 0 11px 12px;
+  padding: 12px 0 11px 12px;
   max-width: 300px;
+  max-height: 124px;
   border: 1px solid #c1c1c1;
   background-color: #fff;
   border-radius: 6px;
@@ -1125,20 +1126,25 @@
     font-size: 20px;
     letter-spacing: 0.03em;
     color: #505050;
-    margin-right: 12px;
+
   }
 
   &__price-new {
     font-size: 12px;
     line-height: 100%;
     letter-spacing: 0.03em;
-
     color: #c1c1c1;
+    margin-right: 15px;
   }
 
   &__img {
     margin-right: 12px;
     object-fit: contain;
+  }
+
+  &__star {
+    font-weight: 700;
+    color: #505050;
   }
 }
 
@@ -1387,6 +1393,12 @@
   transform: translateX(0);
   border-radius: 0;
   z-index: 999;
+}
+
+.star {
+  position: absolute;
+  bottom: 17px;
+  right: 8px;
 }
 
 @import "media";
