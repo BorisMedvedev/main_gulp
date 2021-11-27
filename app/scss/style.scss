@@ -1233,6 +1233,7 @@
   &__cart {
     position: relative;
     display: flex;
+    padding: 12px;
     align-items: center;
     max-width: 450px;
     width: 100%;
@@ -1240,12 +1241,19 @@
     background: #FFFFFF;
     border: 1px solid #C1C1C1;
     border-radius: 3px;
+    margin-bottom: 12px;
   }
 
-
   &__title {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 12px;
+  }
+
+  &__title-text {
     font-size: 14px;
     font-weight: 600;
+    margin-bottom: 5px;
   }
 
   &__header {
@@ -1276,7 +1284,10 @@
   }
 
   &__footer {
+    position: relative;
     padding: 24px;
+    font-size: 24px;
+    color: #000000;
     background-color: #fff;
   }
 
@@ -1300,11 +1311,18 @@
     border: none;
     background-color: rgba(99, 166, 14, 0.1);
   }
+
+  &__num {
+    position: absolute;
+    right: 24px;
+    top: 26px;
+    font-weight: 600;
+  }
 }
 
 .basket-inner {
   top: 9px;
-  left: 160px;
+  left: 140px;
   display: flex;
   align-items: center;
 
