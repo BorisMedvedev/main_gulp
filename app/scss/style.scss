@@ -1072,6 +1072,12 @@
   border: 1px solid #c1c1c1;
   background-color: #fff;
   border-radius: 6px;
+  transition: border-color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $accent;
+  }
 
   &__box {
     display: flex;
