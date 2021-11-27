@@ -599,6 +599,12 @@
   border: 1px solid rgba(17, 17, 17, 0.2);
   border-radius: 6px;
   text-align: left;
+  transition: border-color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $accent;
+  }
 
   &__images {
     &::before {
