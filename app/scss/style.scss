@@ -1235,6 +1235,7 @@
   background-color: #f6f6f6;
   transform: translateY(-300%);
   transition: transform 0.5s;
+  box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.19);
   z-index: 999;
 
   &--active {
@@ -1333,21 +1334,21 @@
   &__btn-close {
     position: relative;
     padding: 10px;
-    top: 0;
-    right: 10px;
+    top: -69px;
+    width: 44px;
+    right: -282px;
+    height: 44px;
     z-index: 999;
+
 
     &::before,
     &::after {
       position: absolute;
-      top: -57px;
-      right: -301px;
       content: "";
       display: block;
-      width: 2px;
+      width: 3px;
       height: 24px;
       background-color: #000;
-
     }
 
     &::before {
@@ -1375,6 +1376,7 @@
   left: 23px;
   transform: translateY(0);
   border-radius: 0;
+  z-index: 999;
 
 }
 
@@ -1384,6 +1386,7 @@
   right: 23px;
   transform: translateX(0);
   border-radius: 0;
+  z-index: 999;
 }
 
 @import "media";
