@@ -4,6 +4,10 @@
 @import "libs";
 @import "global";
 
+.wrapper {
+  overflow: hidden;
+}
+
 .header {
   &__top {
     padding: 14px 0;
@@ -1220,7 +1224,8 @@
 }
 
 .basket {
-  position: absolute;
+  position: fixed;
+  overflow: hidden;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -1228,9 +1233,9 @@
   max-width: 476px;
   width: 100%;
   background-color: #f6f6f6;
-  z-index: 999;
   transform: translateY(-300%);
-  transition: transform 0.3s;
+  transition: transform 0.5s;
+  z-index: 999;
 
   &--active {
     transform: translateY(0);

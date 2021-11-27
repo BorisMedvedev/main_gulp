@@ -35,7 +35,7 @@ $(function () {
   });
 
 
-  $(".navbar__link  ").on("click", function () {
+  $(".navbar__link, .cart__basket-img").on("click", function () {
     $('.basket').toggleClass("basket--active");
     $('.product-list__btn').toggleClass("product-list__btn--active");
   });
