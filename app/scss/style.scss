@@ -1318,6 +1318,34 @@
     top: 26px;
     font-weight: 600;
   }
+
+  &__btn-close {
+    position: relative;
+    top: 0;
+    right: 0;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: -57px;
+      right: -301px;
+      content: "";
+      display: block;
+      width: 2px;
+      height: 24px;
+      background-color: #000;
+
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
 }
 
 .basket-inner {
@@ -1337,7 +1365,7 @@
 
 }
 
-.bt-plus {
+.btn-plus {
   top: 0;
   height: 25px;
   right: 23px;
