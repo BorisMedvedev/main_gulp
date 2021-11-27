@@ -1229,7 +1229,8 @@
   width: 100%;
   background-color: #f6f6f6;
   z-index: 999;
-  transform: translateY(300%);
+  transform: translateY(-300%);
+  transition: transform 0.3s;
 
   &--active {
     transform: translateY(0);
