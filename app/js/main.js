@@ -32,6 +32,16 @@ $(function () {
     $('.product-list__menu').toggleClass("product-list__menu--active");
     $('.product-list__btn').toggleClass("product-list__btn--active");
 
+  });
+
+
+  $(".navbar__link  ").on("click", function () {
+    $('.basket').toggleClass("basket--active");
+    $('.product-list__btn').toggleClass("product-list__btn--active");
+  });
+
+  $(".basket__btn-close ").on("click", function () {
+    $('.basket').toggleClass("basket--active");
 
   });
 

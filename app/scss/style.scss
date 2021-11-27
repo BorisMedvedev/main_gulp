@@ -1229,6 +1229,11 @@
   width: 100%;
   background-color: #f6f6f6;
   z-index: 999;
+  transform: translateY(300%);
+
+  &--active {
+    transform: translateY(0);
+  }
 
   &__cart {
     position: relative;
@@ -1321,8 +1326,10 @@
 
   &__btn-close {
     position: relative;
+    padding: 10px;
     top: 0;
-    right: 0;
+    right: 10px;
+    z-index: 999;
 
     &::before,
     &::after {
