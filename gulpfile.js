@@ -21,10 +21,6 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
-
-
-
-
 const tinypng = () => {
   return src(
     "./app/images/**.jpg",
@@ -68,7 +64,7 @@ function styles() {
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 10 versions"],
-        grid: true,
+        grid: true
       })
     )
     .pipe(dest("app/css"))
