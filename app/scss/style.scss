@@ -4,10 +4,6 @@
 @import "libs";
 @import "global";
 
-.wrapper {
-  overflow: hidden;
-}
-
 .header {
   &__top {
     padding: 14px 0;
@@ -113,9 +109,6 @@
     background-color: $white;
     transition: background-color 0.2s;
 
-    &--active {
-      background-color: #e0edcf;
-    }
 
     &:hover {
       background-color: #e0edcf;
@@ -130,10 +123,19 @@
     border: 1px solid $bordre;
     border-radius: 0 0 6px 6px;
     background-color: $white;
-    z-index: 50;
+    box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.19);
+    visibility: hidden;
+    transform: scale(0);
+    opacity: 0;
+    z-index: 100;
+    transition: opacity 0.5s, scale 0.5s;
 
     &--active {
       display: block;
+      visibility: visible;
+      transform: scale(1);
+      opacity: 1;
+
     }
   }
 
@@ -261,10 +263,9 @@
     display: block;
     width: 50px;
     height: 50px;
-    top: 9px;
-    left: 12px;
     cursor: pointer;
-    z-index: 999;
+    outline: 0;
+    z-index: 30;
 
     &:focus {
       background-color: rgba(255, 255, 255, 0.1);
@@ -630,22 +631,30 @@
     }
   }
 
-  &__heart-svg {
+  &__heart {
     position: absolute;
-    top: 13px;
-    right: 13px;
-    width: 32px;
-    height: 29px;
-    fill: #c1c1c1;
-    transition: fill 0.2s;
+    top: 11px;
+    right: 10px;
+    width: 44px;
+    height: 44px;
 
-    // не понял как сделать фокус
-    &__heart-svg:focus svg {
+    &:focus {
       background: rgba(255, 255, 255, 0.0001);
       box-shadow: 0px 0px 0px 3px #e0edcf;
       border-radius: 3px;
     }
+  }
 
+  &__heart-svg {
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    width: 32px;
+    height: 29px;
+    fill: #c1c1c1;
+    transition: fill .2s;
+
+    // не понял как сделать фокус
     &:hover {
       fill: #ffb800;
     }
@@ -816,6 +825,9 @@
   max-width: 84px;
   text-align: center;
   padding-left: 17px;
+  border: none;
+  background: #EFF6E7;
+  height: 25px;
 }
 
 .btn-more {
@@ -852,7 +864,7 @@
   }
 
   &__logo {
-    display: block;
+    display: inline-block;
     margin-bottom: 30px;
   }
 
@@ -1148,7 +1160,6 @@
     font-size: 20px;
     letter-spacing: 0.03em;
     color: #505050;
-
   }
 
   &__price-new {
@@ -1161,7 +1172,7 @@
 
   &__img {
     margin-right: 12px;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   &__star {
@@ -1251,9 +1262,24 @@
   }
 }
 
-.basket {
+.overlay {
   position: fixed;
-  overflow: hidden;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  display: none;
+}
+
+.overlay--active {
+  display: block;
+}
+
+.basket {
+  display: none;
+  position: fixed;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -1261,14 +1287,22 @@
   max-width: 476px;
   width: 100%;
   background-color: #f6f6f6;
-  transform: translateY(-300%);
-  transition: transform 0.5s;
   box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.19);
   z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transition: 0.5s;
 
   &--active {
-    transform: translateY(0);
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: 0.5s;
   }
+
+
 
   &__cart {
     position: relative;
@@ -1278,8 +1312,8 @@
     max-width: 450px;
     width: 100%;
     height: 84px;
-    background: #FFFFFF;
-    border: 1px solid #C1C1C1;
+    background: #ffffff;
+    border: 1px solid #c1c1c1;
     border-radius: 3px;
     margin-bottom: 12px;
   }
@@ -1305,7 +1339,6 @@
     font-weight: 600;
     font-size: 20px;
     color: #505050;
-
   }
 
   &__price-box {
@@ -1362,17 +1395,34 @@
   &__btn-close {
     position: relative;
     padding: 10px;
-    top: -69px;
+    top: -62px;
     width: 44px;
-    right: -282px;
+    right: -269px;
     height: 44px;
     z-index: 999;
+    transition: background-color 0.2s;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px #E0EDCF;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      background-color: #EFF6E7;
+    }
+
+    &:active {
+      background: rgba(193, 193, 193, 0.3);
+      border-radius: 3px;
+    }
 
 
     &::before,
     &::after {
       position: absolute;
       content: "";
+      top: 11px;
+      left: 20px;
       display: block;
       width: 3px;
       height: 24px;
@@ -1387,7 +1437,6 @@
       transform: rotate(-45deg);
     }
   }
-
 }
 
 .basket-inner {
@@ -1395,7 +1444,6 @@
   left: 140px;
   display: flex;
   align-items: center;
-
 }
 
 .btn-minus {
@@ -1405,7 +1453,6 @@
   transform: translateY(0);
   border-radius: 0;
   z-index: 999;
-
 }
 
 .btn-plus {

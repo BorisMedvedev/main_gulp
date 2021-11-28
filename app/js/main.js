@@ -30,20 +30,47 @@ $(function () {
 
   $(".product-list__btn").on("click", function () {
     $('.product-list__menu').toggleClass("product-list__menu--active");
-    $('.product-list__btn').toggleClass("product-list__btn--active");
-
+    $('.product-list__btn').removeClass("product-list__btn--active");
   });
 
 
-  $(".navbar__link, .cart__basket-img").on("click", function () {
+
+  $(".basket-btn").on("click", function () {
     $('.basket').toggleClass("basket--active");
+    $('.overlay').toggleClass("overlay--active");
+
 
   });
 
   $(".basket__btn-close ").on("click", function () {
     $('.basket').toggleClass("basket--active");
+    $('.overlay').remove("overlay--active");
 
   });
+
+  $("body").on("click", function () {
+    $('.basket').remove("basket--active");
+    $('.overlay').remove("overlay--active");
+
+  });
+
+  $(document).mouseup(function (e) {
+    var container = $('.basket');
+    if (container.has(e.target).length === 0) {
+      container.removeClass('basket--active');
+    }
+  });
+
+  $(document).mouseup(function (e) {
+    var container = $('.overlay');
+    if (container.has(e.target).length === 0) {
+      container.removeClass('overlay--active');
+    }
+  });
+
+
+
+
 
   $('.quantity-inner .bt-minus').click(function () {
     let $input = $(this).parent().find('.quantity');
