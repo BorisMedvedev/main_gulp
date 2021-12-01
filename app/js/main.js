@@ -1,16 +1,4 @@
-
-let swiper1 = new Swiper(".myswiper", {
-  slidesPerView: 6,
-  loop: true,
-  spaceBetween: 30,
-  freeMode: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-let swiper = new Swiper(".main-swiper", {
+let swiper = new Swiper(".main-swiper__wrapper", {
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -24,14 +12,28 @@ let swiper = new Swiper(".main-swiper", {
 
 
 
+let swiper1 = new Swiper(".myswiper", {
+  slidesPerView: 6,
+  loop: true,
+  spaceBetween: 30,
+  freeMode: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+
+
 
 
 
 $(function () {
 
-  $(".product-list__btn").on("click", function () {
-    $('.product-list__menu').toggleClass("product-list__menu--active");
-    $('.product-list__btn').removeClass("product-list__btn--active");
+  $(".catalog-cargo__btn").on("click", function () {
+    $('.catalog-cargo__menu').toggleClass("catalog-cargo__menu--active");
+    $('.catalog-cargo__btn').removeClass("catalog-cargo__btn--active");
   });
 
 
@@ -100,8 +102,8 @@ $(function () {
   });
 
 
-  var containerEl1 = document.querySelector('[data-ref="container-1"]');
-  var containerEl2 = document.querySelector('[data-ref="container-2"]');
+  var containerEl1 = document.querySelector('[data-ref="top-products-filter"]');
+  var containerEl2 = document.querySelector('[data-ref="promo-cards"]');
 
   var config = {
     controls: {

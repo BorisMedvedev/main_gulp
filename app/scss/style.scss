@@ -7,7 +7,7 @@
 .header {
   &__top {
     padding: 14px 0;
-    background-color: #31352b;
+    background-color: $dark-800;
     color: $white;
     font-size: 13px;
     letter-spacing: 1px;
@@ -22,7 +22,7 @@
 
   &__bottom {
     padding: 25px 0;
-    background-color: $accent;
+    background-color: $green-900;
   }
 
   &__bottom-inner {
@@ -55,7 +55,7 @@
     left: 0;
     width: 32px;
     height: 22px;
-    fill: #fff;
+    fill: $white;
   }
 }
 
@@ -72,7 +72,7 @@
     &:focus {
       outline: 0;
       border-radius: 3px;
-      box-shadow: 0 0 0 3px #eff6e7;
+      box-shadow: 0 0 0 3px $box-shadow-focus;
     }
 
     &:hover {
@@ -80,12 +80,12 @@
     }
 
     &:active {
-      color: #e0edcf;
+      color: $green-200;
     }
   }
 }
 
-.product-list {
+.catalog-cargo {
   display: contents;
 
   &__items {
@@ -109,9 +109,8 @@
     background-color: $white;
     transition: background-color 0.2s;
 
-
     &:hover {
-      background-color: #e0edcf;
+      background-color: $green-200;
     }
   }
 
@@ -120,7 +119,7 @@
     position: absolute;
     top: 45px;
     width: 100%;
-    border: 1px solid $bordre;
+    border: 1px solid $border;
     border-radius: 0 0 6px 6px;
     background-color: $white;
     box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.19);
@@ -151,7 +150,7 @@
     display: block;
     padding: 15px 24px;
     font-size: 16px;
-    color: #000000;
+    color: $dark-900;
 
     &::before {
       content: "";
@@ -179,11 +178,11 @@
     }
 
     &:focus {
-      outline: 3px solid #e0edcf;
+      outline: 3px solid $green-200;
     }
 
     &:active {
-      color: #c1c1c1;
+      color: $silver-600;
     }
   }
 }
@@ -218,19 +217,19 @@
     border: none;
 
     &::placeholder {
-      color: $basic;
+      color: $dark-800;
     }
   }
 
   &__btn {
     padding: 15px 52px;
-    background-color: $basic;
+    background-color: $dark-800;
     color: $white;
     font-weight: 600;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     border-radius: 0 6px 6px 0;
-    transform: translateX(-4px);
+    transform: translatex(-4px);
     transition: background-color 0.2s;
 
     &:focus {
@@ -272,7 +271,7 @@
 
     &:focus {
       background-color: rgba(255, 255, 255, 0.1);
-      box-shadow: inset 0 0 0 3px #eff6e7;
+      box-shadow: inset 0 0 0 3px $box-shadow-focus;
       border-radius: 3px;
     }
 
@@ -320,21 +319,21 @@
     padding: 4px;
     line-height: 1.1;
     font-size: 10px;
-    color: #cf3e3b;
-    background-color: #fff;
+    color: $red-900;
+    background-color: $white;
     border-radius: 50%;
   }
 }
 
-.slider {
+.main-swiper {
   min-height: 600px;
   overflow: hidden;
-}
 
-.swiper {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .swiper-slide {
@@ -363,7 +362,7 @@
 
   &__title {
     max-width: 770px;
-    font-family: "Ruda";
+    font-family: "ruda";
     font-weight: 900;
     font-size: 60px;
     line-height: 1.3;
@@ -379,13 +378,13 @@
   &__text p {
     font-size: 16px;
     line-height: 140%;
-    color: #505050;
+    color: $dark-500;
     margin-bottom: 32px;
   }
 
   &__discount {
     display: block;
-    color: $discount;
+    color: $red-900;
   }
 }
 
@@ -398,38 +397,38 @@
   height: 60px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 6px;
-  transform: translateY(-50%);
+  transform: translatey(-50%);
   z-index: 9999;
   transition: background-color 0.2s;
 
   &:focus {
     outline: 0;
-    background-color: #f2f2f2;
+    background-color: $box-shadow-focus;
     box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
     border-radius: 6px;
   }
 
   &:hover {
-    background-color: #e0edcf;
+    background-color: $green-200;
   }
 
   &:hover .swiper-button-prev__svg {
-    fill: #63a60e;
+    fill: $btn;
   }
 
   &:active {
-    background-color: #f3f3f2;
+    background-color: $active;
   }
 
   &:active .swiper-button-prev__svg {
-    fill: #63a60e;
+    fill: $btn;
   }
 
   &__svg {
     position: absolute;
     top: 15px;
     left: 18px;
-    fill: #505050;
+    fill: $dark-500;
     width: 19px;
     height: 32px;
   }
@@ -444,38 +443,38 @@
   height: 60px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 6px;
-  transform: translateY(-50%);
+  transform: translatey(-50%);
   z-index: 9999;
   transition: background-color 0.2s;
 
   &:focus {
     outline: 0;
-    background-color: #f2f2f2;
+    background-color: $box-shadow-focus;
     box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
     border-radius: 6px;
   }
 
   &:hover {
-    background-color: #e0edcf;
+    background-color: $green-200;
   }
 
   &:hover .swiper-button-next__svg {
-    fill: #63a60e;
+    fill: $btn;
   }
 
   &:active {
-    background-color: #f3f3f2;
+    background-color: $active;
   }
 
   &:active .swiper-button-next__svg {
-    fill: #63a60e;
+    fill: $btn;
   }
 
   &__svg {
     position: absolute;
     top: 15px;
     left: 18px;
-    fill: #505050;
+    fill: $dark-500;
     width: 19px;
     height: 32px;
     pointer-events: none;
@@ -488,9 +487,9 @@
   display: none;
 }
 
-.info {
+.advantages {
   padding: 48px 0 24px;
-  background-color: #f6f6f6;
+  background-color: $silver-100;
 
   &__list {
     display: flex;
@@ -504,8 +503,11 @@
   &__item {
     position: relative;
     padding-left: 72px;
-    max-width: 264px;
+    max-width: 260px;
+    line-height: 1.7;
   }
+
+
 
   &__item::before {
     content: "";
@@ -535,10 +537,10 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 1.4;
-    color: $title;
+    color: $dark-900;
 
     & p {
-      color: $text;
+      color: $dark-500;
     }
   }
 }
@@ -548,31 +550,32 @@
   text-align: center;
 }
 
-.filter {
+.filter-product-card {
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
+  margin-bottom: 51px;
 
   &__btn {
     font-weight: 700;
     font-size: 15px;
     text-transform: uppercase;
-    color: $text;
+    color: $dark-500;
     border-bottom: 2px solid transparent;
+    letter-spacing: 0.5px;
 
     &:focus {
       outline: 0;
-      box-shadow: 0 0 0 3px #e0edcf;
+      box-shadow: 0 0 0 3px $green-200;
       border-radius: 3px;
     }
 
     &:hover {
-      color: #63a60e;
+      color: $btn;
     }
 
     &:active {
       box-shadow: 0 0 0 3px transparent;
-      border-bottom: 2px solid #e0edcf;
+      border-bottom: 2px solid $green-200;
     }
   }
 
@@ -582,13 +585,15 @@
 }
 
 .filter__promo {
-  margin-bottom: 46px;
+  margin-bottom: 50px;
 }
 
-.product-card {
+.product-cards {
   &__container {
     padding-left: 0;
     padding-right: 0;
+    max-width: 1350px;
+    width: 100%;
   }
 
   &__wrapper {
@@ -599,11 +604,14 @@
   }
 }
 
-.cart {
+.product-cart {
   position: relative;
-  padding: 57px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 55px 18px 14px;
   max-width: 300px;
-  min-height: 409px;
   border: 1px solid rgba(17, 17, 17, 0.2);
   border-radius: 6px;
   text-align: left;
@@ -612,19 +620,19 @@
 
   &__img {
     object-fit: cover;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
   }
 
   &:hover {
     box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.19);
-    border: 1px solid $accent;
+    border: 1px solid $green-900;
   }
 
   &__images {
     &::before {
       content: "";
       position: absolute;
-      top: 70px;
+      top: 50px;
       left: 0;
       width: 100%;
       height: 220px;
@@ -652,7 +660,7 @@
 
     &:focus {
       background-color: rgba(255, 255, 255, 0.0001);
-      box-shadow: 0 0 0 3px #e0edcf;
+      box-shadow: 0 0 0 3px $green-200;
       border-radius: 3px;
     }
   }
@@ -663,11 +671,11 @@
     left: 6px;
     width: 32px;
     height: 29px;
-    fill: #c1c1c1;
-    transition: fill .2s;
+    fill: $silver-600;
+    transition: fill 0.2s;
 
     &:hover {
-      fill: #ffb800;
+      fill: $yellow-900;
     }
 
     &:active {
@@ -675,72 +683,46 @@
     }
   }
 
-  &__sale-box {
-    position: absolute;
-    max-width: 70px;
-    top: 12px;
-    left: 10px;
-  }
 
-  &__sale-hit {
-    display: block;
-    padding: 1px 7px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 10px;
-    color: $white;
-    background-color: $btn;
-    border-radius: 6px;
-    text-transform: uppercase;
-    margin-bottom: 3px;
-
-    &--bg {
-      background-color: $hit;
-    }
-  }
-
-  &__sale {
-    padding: 1px 7px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 10px;
-    color: $white;
-    background-color: $discount;
-    border-radius: 6px;
-  }
-
-  &__box {
-    display: flex;
-    justify-content: space-between;
-  }
 
   &__title {
+    flex: auto;
     max-width: 262px;
-    overflow: hidden;
-    text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
-    max-height: 1 * 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    color: $dark-900;
+    margin-bottom: 9px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__price {
-    position: absolute;
-    bottom: 13px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
   }
 
   &__price-old {
     position: relative;
-    display: block;
-    color: #c1c1c1;
+    color: $silver-600;
 
     &::before {
       content: "";
       display: block;
       position: absolute;
-      left: -7px;
-      top: -16px;
-      width: 50px;
+      left: -2px;
+      top: -18px;
+      width: 44px;
       height: 50px;
       background-repeat: no-repeat;
       background-size: contain;
@@ -750,9 +732,9 @@
   }
 
   &__basket-img {
-    position: absolute;
-    right: 18px;
-    bottom: 16px;
+
+    right: -28px;
+    bottom: 8px;
     width: 32px;
     height: 32px;
     background-color: $btn;
@@ -760,7 +742,7 @@
   }
 
   &__basket-svg {
-    position: absolute;
+
     z-index: 999;
     width: 20px;
     height: 20px;
@@ -769,22 +751,51 @@
   }
 }
 
-.quantity-inner {
+.sale-box {
   position: absolute;
-  bottom: 10px;
-  left: 38%;
+  max-width: 70px;
+  top: 11px;
+  left: 10px;
 }
+
+.hit {
+  display: block;
+  padding: 1px 7px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 10px;
+  color: $white;
+  background-color: $btn;
+  border-radius: 6px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+
+  &--bg {
+    background-color: $orange-900;
+  }
+}
+
+.sale {
+  padding: 1px 7px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 10px;
+  color: $white;
+  background-color: $red-900;
+  border-radius: 6px;
+}
+
+
 
 .bt-minus {
   position: relative;
   width: 24px;
   height: 24px;
-  top: 50%;
   left: 27px;
-  transform: translateY(-23%);
-  background-color: #63a60e;
+  transform: translatey(-23%);
+  background-color: $btn;
   border-radius: 3px 0 0 3px;
-  color: #fff;
+  color: $white;
 
   &::before {
     content: "";
@@ -794,7 +805,7 @@
     left: 4px;
     width: 16px;
     height: 2px;
-    background-color: #fff;
+    background-color: $white;
   }
 }
 
@@ -803,10 +814,10 @@
   width: 24px;
   top: -6px;
   height: 24px;
-  background-color: #63a60e;
+  background-color: $btn;
   border-radius: 0 3px 3px 0;
-  color: #fff;
-  transform: translateX(-26px);
+  color: $white;
+  transform: translatex(-26px);
 
   &::before {
     content: "";
@@ -816,7 +827,7 @@
     left: 4px;
     width: 16px;
     height: 2px;
-    background-color: #fff;
+    background-color: $white;
     transform: rotate(270deg);
   }
 
@@ -828,7 +839,7 @@
     left: 4px;
     width: 16px;
     height: 2px;
-    background-color: #fff;
+    background-color: $white;
   }
 }
 
@@ -837,12 +848,12 @@
   text-align: center;
   padding-left: 17px;
   border: none;
-  background-color: #EFF6E7;
+  background-color: $box-shadow-focus;
   height: 25px;
 }
 
 .btn-more {
-  background-color: #ffffff;
+  background-color: $white;
   border: 1px solid $btn;
   color: $btn;
 
@@ -852,23 +863,23 @@
   }
 
   &:hover {
-    background-color: #eff6e7;
+    background-color: $box-shadow-focus;
   }
 
   &:active {
-    background-color: #ffffff;
+    background-color: $white;
     color: rgba(99, 166, 14, 0.5);
     box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
   }
 }
 
 .footer {
-  padding-top: 25px;
+  padding-top: 29px;
   color: $white;
-  background-color: $basic;
+  background-color: $dark-800;
 
   &__center {
-    padding-left: 72px;
+    padding-left: 61px;
     column-count: 3;
     column-width: 130px;
     column-gap: 74px;
@@ -891,16 +902,20 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
   }
 
-  &__text {
-    margin-bottom: 13px;
+  .footer__item p {
+    margin-bottom: 27px;
+    line-height: 0;
   }
+
 
   &__link {
     display: block;
     font-size: 14px;
     margin-bottom: 18px;
+    line-height: 1.2;
   }
 
   &__inner {
@@ -908,20 +923,24 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &__copy {
+    text-transform: uppercase;
+  }
 }
 
 .form {
   &__input {
     padding: 9px 12px 12px;
     max-width: 180px;
-    background-color: #ffffff;
+    background-color: $white;
     border-radius: 6px 0 0 6px;
     border: none;
 
     &::placeholder {
       font-weight: 400;
       font-size: 14px;
-      color: #4f4f4f;
+      color: $placeholder;
     }
   }
 
@@ -929,22 +948,22 @@
     padding: 12px 16px;
     font-size: 12px;
     text-transform: uppercase;
-    color: #ffffff;
+    color: $white;
     border-radius: 0 6px 6px 0;
-    transform: translateX(-4px);
+    transform: translatex(-4px);
     transition: background-color 0.2s;
 
     &:focus {
-      box-shadow: 0 0 0 4px #e0edcf;
+      box-shadow: 0 0 0 4px $green-200;
       border-radius: 0 6px 6px 0;
     }
 
     &:hover {
-      background-color: #4d810c;
+      background-color: $hover;
     }
 
     &:active {
-      background-color: #63a60e;
+      background-color: $btn;
       box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 0 6px 6px 0;
       color: rgba(255, 255, 255, 0.5);
@@ -955,6 +974,7 @@
 .social {
   &__list {
     display: flex;
+    padding-right: 50px;
   }
 
   &__item {
@@ -967,7 +987,7 @@
     display: block;
 
     &:focus {
-      box-shadow: 0 0 0 3px #e0edcf;
+      box-shadow: 0 0 0 3px $green-200;
       border-radius: 3px;
     }
 
@@ -978,16 +998,17 @@
     &-svg {
       width: 32px;
       height: 32px;
-      fill: #fff;
+      fill: $white;
       transition: opacity 0.2s;
-
 
       &:active {
         opacity: 1;
-        fill: #e0edcf;
+        fill: $green-200;
       }
     }
   }
+
+
 }
 
 .visa {
@@ -1023,14 +1044,14 @@
     grid-gap: 30px;
     font-weight: 700;
     font-size: 12px;
-    color: #505050;
+    color: $dark-500;
     line-height: 1;
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
   &__item {
-    background-color: #4d810c;
+    background-color: $hover;
     padding: 76px 32px;
     border-radius: 4px;
     background-repeat: no-repeat;
@@ -1043,33 +1064,42 @@
     margin-bottom: 18px;
 
     &--big {
-      color: #ffffff;
+      color: $white;
       text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
     }
   }
 
   &__title {
-    margin-bottom: 12px;
-    font-family: "Ruda";
-    font-weight: 400;
+    display: block;
+    max-width: 160px;
+    font-family: "ruda";
+    font-weight: 600;
     font-size: 30px;
     line-height: 1.4;
+    margin-bottom: 12px;
 
     &--big {
-      max-width: 365px;
-      color: #ffffff;
-      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+      max-width: 371px;
+      color: $white;
+      text-shadow: 2px 2px 0 rgb(0 0 0 / 25%);
+      letter-spacing: 0;
+
     }
   }
 
   &__link {
+    display: inline-block;
     font-size: 14px;
-    border-bottom: 2px solid #505050;
+    border-bottom: 2px solid $dark-500;
+    letter-spacing: 0.2px;
+    padding-bottom: 4px;
 
     &--big {
-      color: #ffffff;
-      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
-      border-bottom: 2px solid #fff;
+      max-width: 382px;
+      color: $white;
+      text-shadow: 2px 2px 0 rgb(0 0 0 / 25%);
+      letter-spacing: 0.2px;
+      border-bottom: 2px solid $white;
     }
   }
 }
@@ -1080,7 +1110,7 @@
 
 .promo {
   padding: 72px 0;
-  background-color: #f5f5f5;
+  background-color: $silver-100;
 
   &__btn {
     display: block;
@@ -1101,14 +1131,14 @@
   max-width: 300px;
   max-height: 124px;
   border: 1px solid #c1c1c1;
-  background-color: #fff;
+  background-color: $white;
   border-radius: 6px;
   transition: box-shadow 0.2s, border-color 0.2s;
   cursor: pointer;
 
   &:hover {
     box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.19);
-    border: 1px solid $accent;
+    border: 1px solid $green-900;
   }
 
   &__box {
@@ -1118,18 +1148,16 @@
   }
 
   &__title {
+    // тут вопрос, почему то странно обрезает не как в продукт карте
     max-width: 164px;
     font-size: 14px;
     font-weight: 600;
-    letter-spacing: .03em;
-    text-transform: uppercase;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
+    letter-spacing: 0.03em;
     display: -webkit-box;
-    -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
-    max-height: 3;
-    color: #121212;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: $dark-900;
     margin-bottom: 3px;
   }
 
@@ -1138,12 +1166,12 @@
     font-weight: 600;
     font-size: 10px;
     letter-spacing: 0.03em;
-    color: #63a60e;
+    color: $btn;
     margin-bottom: 5px;
     text-transform: uppercase;
 
     &--end {
-      color: $discount;
+      color: $red-900;
     }
   }
 
@@ -1159,11 +1187,11 @@
     font-size: 10px;
     text-transform: uppercase;
     color: $white;
-    background-color: $accent;
+    background-color: $green-900;
     border-radius: 6px;
 
     &--accent {
-      background-color: $hit;
+      background-color: $orange-900;
     }
   }
 
@@ -1171,15 +1199,30 @@
     font-weight: 600;
     font-size: 20px;
     letter-spacing: 0.03em;
-    color: #505050;
+    color: $dark-500;
   }
 
   &__price-new {
+    position: relative;
     font-size: 12px;
     line-height: 100%;
     letter-spacing: 0.03em;
-    color: #c1c1c1;
+    color: $silver-600;
     margin-right: 15px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -2px;
+      top: -16px;
+      width: 32px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(../images/sprite.svg#icons--line);
+    }
   }
 
   &__img {
@@ -1189,7 +1232,7 @@
 
   &__star {
     font-weight: 700;
-    color: #505050;
+    color: $dark-500;
   }
 }
 
@@ -1219,7 +1262,7 @@
     left: 20px;
     text-align: center;
     padding: 18px 15px 2px;
-    background-color: #ffffff;
+    background-color: $white;
     border-radius: 0 0 4px 4px;
   }
 
@@ -1227,13 +1270,13 @@
     display: block;
     font-weight: 700;
     font-size: 10px;
-    color: #121212;
+    color: $dark-900;
   }
 
   &__date {
     font-weight: 700;
     font-size: 30px;
-    color: #121212;
+    color: $dark-900;
   }
 
   &__list {
@@ -1245,20 +1288,30 @@
   &__item {
     position: relative;
     max-width: 410px;
-    background-color: #ffffff;
+    background-color: $white;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $btn;
+    }
   }
 
   &__item p {
     padding: 21px;
     font-size: 16px;
     font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__box {
     display: flex;
     justify-content: space-between;
+    padding-top: 5px;
     align-items: baseline;
   }
 
@@ -1271,29 +1324,27 @@
     display: block;
     font-weight: 700;
     font-size: 14px;
-    color: #63A60E;
+    color: $btn;
     text-align: right;
-    border-bottom: 2px solid #63A60E;
+    border-bottom: 2px solid $btn;
     text-transform: uppercase;
     transition: border-bottom 0.2s, color 0.2s;
     outline: 0;
 
     &:focus {
-      box-shadow: 0 0 0 3px #E0EDCF;
+      box-shadow: 0 0 0 3px $green-200;
       border-radius: 3px;
     }
 
     &:hover {
-      color: #4D800C;
-      border-bottom: 2px solid #4D800C;
+      color: $hover-border;
+      border-bottom: 2px solid $hover-border;
     }
 
     &:active {
       box-shadow: none;
-      border-bottom: 2px solid #E0EDCF;
-
+      border-bottom: 2px solid $green-200;
     }
-
   }
 }
 
@@ -1321,13 +1372,14 @@
   justify-content: space-between;
   max-width: 476px;
   width: 100%;
-  background-color: #f6f6f6;
+  background-color: $green-200;
   box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.19);
   z-index: 999;
   opacity: 0;
   visibility: hidden;
   transform: scale(0);
   transition: 0.5s;
+  z-index: 9999;
 
   &--active {
     display: block;
@@ -1337,8 +1389,6 @@
     transition: 0.5s;
   }
 
-
-
   &__cart {
     position: relative;
     display: flex;
@@ -1347,15 +1397,15 @@
     max-width: 450px;
     width: 100%;
     height: 84px;
-    background-color: #ffffff;
-    border: 1px solid #c1c1c1;
+    background-color: $white;
+    border: 1px solid $silver-600;
     border-radius: 3px;
     margin-bottom: 12px;
   }
 
   &__title {
     font-size: 24px;
-    color: #000000;
+    color: $dark-900;
     margin-bottom: 12px;
   }
 
@@ -1367,13 +1417,13 @@
 
   &__header {
     padding: 19px 24px 11px;
-    background-color: #fff;
+    background-color: $white;
   }
 
   &__price {
     font-weight: 600;
     font-size: 20px;
-    color: #505050;
+    color: $dark-500;
   }
 
   &__price-box {
@@ -1381,7 +1431,7 @@
   }
 
   &__product {
-    color: #121212;
+    color: $dark-900;
     overflow-y: scroll;
     height: 500px;
     padding: 11px;
@@ -1395,8 +1445,8 @@
     position: relative;
     padding: 24px;
     font-size: 24px;
-    color: #000000;
-    background-color: #fff;
+    color: $dark-900;
+    background-color: $white;
   }
 
   &__btn {
@@ -1411,7 +1461,7 @@
     right: 13px;
     font-weight: 600;
     font-size: 20px;
-    color: #505050;
+    color: $dark-500;
   }
 
   &__input {
@@ -1438,19 +1488,18 @@
     transition: background-color 0.2s;
 
     &:focus {
-      box-shadow: 0 0 0 3px #E0EDCF;
+      box-shadow: 0 0 0 3px $green-200;
       border-radius: 3px;
     }
 
     &:hover {
-      background-color: #EFF6E7;
+      background-color: $box-shadow-focus;
     }
 
     &:active {
       background-color: rgba(193, 193, 193, 0.3);
       border-radius: 3px;
     }
-
 
     &::before,
     &::after {
@@ -1461,7 +1510,7 @@
       display: block;
       width: 3px;
       height: 24px;
-      background-color: #000;
+      background-color: $dark-900;
     }
 
     &::before {
@@ -1485,7 +1534,7 @@
   top: 0;
   height: 25px;
   left: 23px;
-  transform: translateY(0);
+  transform: translatey(0);
   border-radius: 0;
   z-index: 999;
 }
@@ -1494,7 +1543,7 @@
   top: 0;
   height: 25px;
   right: 23px;
-  transform: translateX(0);
+  transform: translatex(0);
   border-radius: 0;
   z-index: 999;
 }
@@ -1504,5 +1553,3 @@
   bottom: 17px;
   right: 8px;
 }
-
-@import "media";
