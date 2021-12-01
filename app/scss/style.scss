@@ -507,8 +507,6 @@
     line-height: 1.7;
   }
 
-
-
   &__item::before {
     content: "";
     display: block;
@@ -683,8 +681,6 @@
     }
   }
 
-
-
   &__title {
     flex: auto;
     max-width: 262px;
@@ -732,7 +728,6 @@
   }
 
   &__basket-img {
-
     right: -28px;
     bottom: 8px;
     width: 32px;
@@ -742,7 +737,6 @@
   }
 
   &__basket-svg {
-
     z-index: 999;
     width: 20px;
     height: 20px;
@@ -784,8 +778,6 @@
   background-color: $red-900;
   border-radius: 6px;
 }
-
-
 
 .bt-minus {
   position: relative;
@@ -902,14 +894,12 @@
   &__list {
     display: flex;
     justify-content: space-between;
-
   }
 
   .footer__item p {
     margin-bottom: 27px;
     line-height: 0;
   }
-
 
   &__link {
     display: block;
@@ -1007,8 +997,6 @@
       }
     }
   }
-
-
 }
 
 .visa {
@@ -1083,7 +1071,6 @@
       color: $white;
       text-shadow: 2px 2px 0 rgb(0 0 0 / 25%);
       letter-spacing: 0;
-
     }
   }
 
