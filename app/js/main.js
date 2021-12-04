@@ -1,5 +1,5 @@
 let swiper = new Swiper(".main-swiper__wrapper", {
-  loop: true,
+
   pagination: {
     el: ".swiper-pagination",
 
@@ -31,9 +31,9 @@ let swiper1 = new Swiper(".myswiper", {
 
 $(function () {
 
-  $(".catalog-cargo__btn").on("click", function () {
-    $('.catalog-cargo__menu').toggleClass("catalog-cargo__menu--active");
-    $('.catalog-cargo__btn').removeClass("catalog-cargo__btn--active");
+  $(".catalog-goods__btn").on("click", function () {
+    $('.catalog-goods__menu').toggleClass("catalog-goods__menu--active");
+    $('.catalog-goods__btn').removeClass("catalog-goods__btn--active");
   });
 
 

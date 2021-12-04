@@ -49,7 +49,7 @@
             <ul class="menu">
               <li class="menu__item">
                 <a class="menu__link link-size anime-link" href="#">
-                  доставка
+                  Доставка
                 </a>
               </li>
               <li class="menu__item">
@@ -74,45 +74,45 @@
                 alt="логотип интернет магазина фрешок" />
             </a>
 
-            <div class="catalog-cargo">
-              <div class="catalog-cargo__items">
-                <button class="catalog-cargo__btn" type="button">
-                  <svg class="catalog-cargo__svg">
+            <div class="catalog-goods">
+              <div class="catalog-goods__items">
+                <button class="catalog-goods__btn" type="button">
+                  <svg class="catalog-goods__svg">
                     <use xlink:href="images/sprite.svg#icons--btn_products"></use>
                   </svg>
                   каталог продуктов
                 </button>
-                <ul class="catalog-cargo__menu">
-                  <li class="catalog-cargo__item">
-                    <a class="catalog-cargo__link link-size" href="#">овощи и фрукты
+                <ul class="catalog-goods__menu">
+                  <li class="catalog-goods__item">
+                    <a class="catalog-goods__link link-size" href="#">овощи и фрукты
                     </a>
                   </li>
-                  <li class="catalog-cargo__item">
-                    <a class="catalog-cargo__link link-size" href="#">бакалея
+                  <li class="catalog-goods__item">
+                    <a class="catalog-goods__link link-size" href="#">бакалея
                     </a>
                   </li>
-                  <li class="catalog-cargo__item">
-                    <a class="catalog-cargo__link link-size" href="#">молочные продукты
+                  <li class="catalog-goods__item">
+                    <a class="catalog-goods__link link-size" href="#">молочные продукты
                     </a>
                   </li>
-                  <li class="catalog-cargo__item">
-                    <a class="catalog-cargo__link link-size" href="#">хлеб
+                  <li class="catalog-goods__item">
+                    <a class="catalog-goods__link link-size" href="#">хлеб
                     </a>
                   </li>
-                  <li class="catalog-cargo__item">
-                    <a class="catalog-cargo__link link-size" href="#">молочные продукты
+                  <li class="catalog-goods__item">
+                    <a class="catalog-goods__link link-size" href="#">молочные продукты
                     </a>
                   </li>
-                  <li class="catalog-cargo__item">
-                    <a class="catalog-cargo__link link-size" href="#">колбаса
+                  <li class="catalog-goods__item">
+                    <a class="catalog-goods__link link-size" href="#">колбаса
                     </a>
                   </li>
-                  <li class="catalog-cargo__item">
-                    <a class="catalog-cargo__link link-size" href="#">рыба
+                  <li class="catalog-goods__item">
+                    <a class="catalog-goods__link link-size" href="#">рыба
                     </a>
                   </li>
-                  <li class="catalog-cargo__item">
-                    <a class="catalog-cargo__link link-size" href="#">алкоголь
+                  <li class="catalog-goods__item">
+                    <a class="catalog-goods__link link-size" href="#">алкоголь
                     </a>
                   </li>
                 </ul>
@@ -120,7 +120,9 @@
             </div>
             <form class="search-form">
               <label class="search-form__label">
-                <input class="search-form__input" name="search" placeholder="найти в магазине ..." type="search" />
+                <span class="sr-only">введите название товара который хотите найти</span>
+                <input class="search-form__input" name="search" placeholder="найти в магазине ..." type="search"
+                  required />
               </label>
               <button class="search-form__btn" type="submit">поиск</button>
             </form>
@@ -149,66 +151,69 @@
       </div>
     </nav>
   </header>
+  <h1 class="sr-only">
+    самый лучший онлайн-маркет по продаже овощей и фруктов фрешок
+  </h1>
   <main>
     <section class="main-swiper">
       <div class="main-swiper__wrapper">
+        <h2 class="sr-only">
+          акции в онлайн-маркете по продаже овощей и фруктов фрешок
+        </h2>
         <ul class="swiper-wrapper">
-          <h1 class="sr-only">
-            самый лучший онлайн-маркет по продаже овощей и фруктов фрешок
-          </h1>
           <li class="swiper-slide" style="background-image: url('images/bg/slide.jpg')">
             <div class="swiper-slide__box">
-              <h2 class="swiper-slide__title">
+              <h3 class="swiper-slide__title">
                 свежачок вам в хату
                 <span class="swiper-slide__discount"> скидка -50% </span>
-              </h2>
+              </h3>
               <div class="swiper-slide__text">
                 <p>
                   только с 7 по 13 июля скидка на сезонные фрукты и овощи до
                   50%. торопитесь!
                 </p>
               </div>
-              <button class="btn-anime btn" type="button">
-                купить сейчас
-              </button>
+              <a class="btn-anime btn" href="#" type="button">
+                Купить сейчас
+              </a>
             </div>
           </li>
           <li class="swiper-slide" style="background-image: url('images/bg/stefano.jpg')">
             <div class="swiper-slide__box">
-              <h2 class="swiper-slide__title">
+              <h3 class="swiper-slide__title">
                 накрути себе томатов
                 <span class="swiper-slide__discount">
                   акция: 3 кг по цене 1
                 </span>
-              </h2>
+              </h3>
               <div class="swiper-slide__text">
                 <p>
                   только с 7 по 13 июля скидка на сезонные фрукты и овощи до
                   50%. торопитесь!
                 </p>
               </div>
-              <button class="btn-anime btn" type="button">
-                купить сейчас
-              </button>
+              <a class="btn-anime btn" href="#" type="button">
+                Купить сейчас
+              </a>
             </div>
           </li>
           <li class="swiper-slide" style="background-image: url('images/bg/petra.jpg')">
             <div class="swiper-slide__box">
-              <h2 class="swiper-slide__title">
+              <h3 class="swiper-slide__title">
                 пусть остальные позеленеют от зависти
                 <span class="swiper-slide__discount">
                   распродажа зелени
                 </span>
-              </h2>
+              </h3>
               <div class="swiper-slide__text">
                 <p>
                   только с 7 по 13 июля скидка на сезонные фрукты и овощи до
                   50%. торопитесь!
                 </p>
               </div>
-              <button class="btn-anime btn" type="button">
-                купить сейчас
-              </button>
+              <a class="btn-anime btn" href="#" type="button">
+                Купить сейчас
+              </a>
             </div>
           </li>
         </ul>
@@ -233,23 +238,26 @@
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--scooter">
             <span class="advantages__title">бесплатная доставка</span>
-            <p>для заказов на сумму от 500 ₽</p>
+            <span class="advantages__text">для заказов на сумму от 500<span>₽</span></span>
           </li>
           <li class="advantages__item advantages__item--box">
             <span class="advantages__title">возврат товара</span>
-            <p>если товары были испорчены</p>
+            <span class="advantages__text">если товары были испорчены</span>
           </li>
           <li class="advantages__item advantages__item--hours">
             <span class="advantages__title">поддержка 24/7</span>
-            <p>лучшие операторы</p>
+            <span class="advantages__text">лучшие операторы</span>
           </li>
         </ul>
       </div>
     </div>
 
     <section class="top-products" data-ref="top-products-filter">
+      <h2 class="sr-only">
+        топовые товары онлайн-маркета по продаже овощей и фруктов
+      </h2>
       <div class="container">
-        <h2 class="title">топовые товары</h2>
+        <h3 class="title">топовые товары</h3>
         <ul class="filter-product-card">
           <li class="filter-product-card__item">
             <button class="filter-product-card__btn" type="button" data-filter="all">
@@ -281,11 +289,12 @@
         <div class="product-cards">
           <div class="container product-cards__container">
             <ul class="product-cards__wrapper">
+
               <li class="product-cards__item mix fruit">
                 <article class="product-cart">
                   <div class="sale-box">
-                    <span class="hit hit">новинка</span>
-                    <span class="sale">-50%</span>
+                    <span class="hit">новинка</span>
+                    <span class="hit hit--red">-50%</span>
                   </div>
                   <button class="product-cart__heart" type="button">
                     <svg class="product-cart__heart-svg">
@@ -295,25 +304,25 @@
                   </button>
                   <a class="product-cart__images" href="#">
                     <img class="product-cart__img" src="images/carts/pineapple.png" width="300" height="215"
-                      alt="Ананас" />
+                      alt="Перец оранжевый" />
                   </a>
-                  <h3 class="product-cart__title">Ананас, 1кг</h3>
+                  <h4 class="product-cart__title">Ананас, 1кг</h4>
                   <div class="product-cart__footer">
                     <div class="product-cart__price">
-                      <span class="product-cart__price-old">1999 ₽ </span>
-                      <span class="product-cart__price-new">999 ₽ </span>
+                      <span class="product-cart__price-old">1999 <span>₽</span> </span>
+                      <span class="product-cart__price-new">999 <span>₽</span> </span>
                     </div>
                     <form class="quantity-inner">
-                      <button class="bt-minus btn-anime" type="submit">
+                      <button class="bt-minus btn-anime" type="button">
                         <span class="sr-only">уменьшить количество товара</span>
                       </button>
                       <label class="quantity-label">
                         <input type="number" class="quantity" name="quantity" value="1" data-max-count="99" />
                       </label>
-                      <button class="bt-plus btn-anime" type="submit">
+                      <button class="bt-plus btn-anime" type="button">
                         <span class="sr-only">увеличить количество товара</span>
                       </button>
-                      <button class="product-cart__basket-img btn-anime" type="submit">
+                      <button class="product-cart__basket-btn btn-anime" type="submit">
                         <svg class="product-cart__basket-svg">
                           <use xlink:href="images/sprite.svg#icons--cart"></use>
                         </svg>
@@ -323,11 +332,12 @@
                   </div>
                 </article>
               </li>
+
               <li class="product-cards__item mix fruit">
                 <article class="product-cart">
                   <div class="sale-box">
-                    <span class="hit hit">новинка</span>
-                    <span class="sale">-50%</span>
+                    <span class="hit">новинка</span>
+                    <span class="hit hit--red">-50%</span>
                   </div>
                   <button class="product-cart__heart" type="button">
                     <svg class="product-cart__heart-svg">
@@ -336,25 +346,26 @@
                     <span class="sr-only">добавить товар в избранные</span>
                   </button>
                   <a class="product-cart__images" href="#">
-                    <img class="product-cart__img" src="images/carts/lemon.png" width="300" height="215" alt="лимон" />
+                    <img class="product-cart__img" src="images/carts/lemon.png" width="300" height="215"
+                      alt="Перец оранжевый" />
                   </a>
-                  <h3 class="product-cart__title">Лимон, 1кг</h3>
+                  <h4 class="product-cart__title">Лимон, 1кг</h4>
                   <div class="product-cart__footer">
                     <div class="product-cart__price">
-                      <span class="product-cart__price-old">1999 ₽ </span>
-                      <span class="product-cart__price-new">999 ₽ </span>
+
+                      <span class="product-cart__price-new">199 <span>₽</span> </span>
                     </div>
                     <form class="quantity-inner">
-                      <button class="bt-minus btn-anime" type="submit">
+                      <button class="bt-minus btn-anime" type="button">
                         <span class="sr-only">уменьшить количество товара</span>
                       </button>
                       <label class="quantity-label">
                         <input type="number" class="quantity" name="quantity" value="1" data-max-count="99" />
                       </label>
-                      <button class="bt-plus btn-anime" type="submit">
+                      <button class="bt-plus btn-anime" type="button">
                         <span class="sr-only">увеличить количество товара</span>
                       </button>
-                      <button class="product-cart__basket-img btn-anime" type="submit">
+                      <button class="product-cart__basket-btn btn-anime" type="submit">
                         <svg class="product-cart__basket-svg">
                           <use xlink:href="images/sprite.svg#icons--cart"></use>
                         </svg>
@@ -364,11 +375,12 @@
                   </div>
                 </article>
               </li>
+
               <li class="product-cards__item mix fruit">
                 <article class="product-cart">
                   <div class="sale-box">
-                    <span class="hit hit">новинка</span>
-                    <span class="sale">-50%</span>
+                    <span class="hit hit--orange">хит</span>
+
                   </div>
                   <button class="product-cart__heart" type="button">
                     <svg class="product-cart__heart-svg">
@@ -378,27 +390,25 @@
                   </button>
                   <a class="product-cart__images" href="#">
                     <img class="product-cart__img" src="images/carts/dragon_fruit.png" width="300" height="215"
-                      alt="Питахайя красная с белой мякотью" />
+                      alt="Перец оранжевый" />
                   </a>
-                  <h3 class="product-cart__title">
-                    Питахайя красная с белой мякотью, 1шт
-                  </h3>
+                  <h4 class="product-cart__title">Питахайя красная с белой мякотью, 1шт</h4>
                   <div class="product-cart__footer">
                     <div class="product-cart__price">
-                      <span class="product-cart__price-old">1999 ₽ </span>
-                      <span class="product-cart__price-new">999 ₽ </span>
+                      <span class="product-cart__price-old">1999 <span>₽</span> </span>
+                      <span class="product-cart__price-new">999 <span>₽</span> </span>
                     </div>
                     <form class="quantity-inner">
-                      <button class="bt-minus btn-anime" type="submit">
+                      <button class="bt-minus btn-anime" type="button">
                         <span class="sr-only">уменьшить количество товара</span>
                       </button>
                       <label class="quantity-label">
                         <input type="number" class="quantity" name="quantity" value="1" data-max-count="99" />
                       </label>
-                      <button class="bt-plus btn-anime" type="submit">
+                      <button class="bt-plus btn-anime" type="button">
                         <span class="sr-only">увеличить количество товара</span>
                       </button>
-                      <button class="product-cart__basket-img btn-anime" type="submit">
+                      <button class="product-cart__basket-btn btn-anime" type="submit">
                         <svg class="product-cart__basket-svg">
                           <use xlink:href="images/sprite.svg#icons--cart"></use>
                         </svg>
@@ -408,11 +418,12 @@
                   </div>
                 </article>
               </li>
-              <li class="product-cards__item mix grocery">
+
+              <li class="product-cards__item mix vegetables">
                 <article class="product-cart">
                   <div class="sale-box">
-                    <span class="hit hit">новинка</span>
-                    <span class="sale">-50%</span>
+                    <!-- <span class="hit">новинка</span>
+                    <span class="hit hit--red">-50%</span> -->
                   </div>
                   <button class="product-cart__heart" type="button">
                     <svg class="product-cart__heart-svg">
@@ -422,28 +433,25 @@
                   </button>
                   <a class="product-cart__images" href="#">
                     <img class="product-cart__img" src="images/carts/ketchup.png" width="300" height="215"
-                      alt="Кетчуп томатный детский органический Bio-Zentrale 500мл" />
+                      alt="Перец оранжевый" />
                   </a>
-                  <h3 class="product-cart__title">
-                    Кетчуп томатный детский органический Bio-Zentrale 500мл, 1
-                    шт
-                  </h3>
+                  <h4 class="product-cart__title">Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт</h4>
                   <div class="product-cart__footer">
                     <div class="product-cart__price">
-                      <span class="product-cart__price-old">1999 ₽ </span>
-                      <span class="product-cart__price-new">999 ₽ </span>
+
+                      <span class="product-cart__price-new">600 <span>₽</span> </span>
                     </div>
                     <form class="quantity-inner">
-                      <button class="bt-minus btn-anime" type="submit">
+                      <button class="bt-minus btn-anime" type="button">
                         <span class="sr-only">уменьшить количество товара</span>
                       </button>
                       <label class="quantity-label">
                         <input type="number" class="quantity" name="quantity" value="1" data-max-count="99" />
                       </label>
-                      <button class="bt-plus btn-anime" type="submit">
+                      <button class="bt-plus btn-anime" type="button">
                         <span class="sr-only">увеличить количество товара</span>
                       </button>
-                      <button class="product-cart__basket-img btn-anime" type="submit">
+                      <button class="product-cart__basket-btn btn-anime" type="submit">
                         <svg class="product-cart__basket-svg">
                           <use xlink:href="images/sprite.svg#icons--cart"></use>
                         </svg>
@@ -453,11 +461,12 @@
                   </div>
                 </article>
               </li>
+
               <li class="product-cards__item mix vegetables">
                 <article class="product-cart">
                   <div class="sale-box">
-                    <span class="hit hit">новинка</span>
-                    <span class="sale">-50%</span>
+                    <span class="hit hit--orange">хит</span>
+
                   </div>
                   <button class="product-cart__heart" type="button">
                     <svg class="product-cart__heart-svg">
@@ -467,27 +476,25 @@
                   </button>
                   <a class="product-cart__images" href="#">
                     <img class="product-cart__img" src="images/carts/carrot.png" width="300" height="215"
-                      alt="Морковь молодая с бабушкиной грядки" />
+                      alt="Перец оранжевый" />
                   </a>
-                  <h3 class="product-cart__title">
-                    Морковь молодая с бабушкиной грядки, 1кг
-                  </h3>
+                  <h4 class="product-cart__title">Морковь молодая с бабушкиной грядки, 1кг</h4>
                   <div class="product-cart__footer">
                     <div class="product-cart__price">
-                      <span class="product-cart__price-old">49 ₽ </span>
-                      <span class="product-cart__price-new">99 ₽ </span>
+
+                      <span class="product-cart__price-new">49 <span>₽</span> </span>
                     </div>
                     <form class="quantity-inner">
-                      <button class="bt-minus btn-anime" type="submit">
+                      <button class="bt-minus btn-anime" type="button">
                         <span class="sr-only">уменьшить количество товара</span>
                       </button>
                       <label class="quantity-label">
                         <input type="number" class="quantity" name="quantity" value="1" data-max-count="99" />
                       </label>
-                      <button class="bt-plus btn-anime" type="submit">
+                      <button class="bt-plus btn-anime" type="button">
                         <span class="sr-only">увеличить количество товара</span>
                       </button>
-                      <button class="product-cart__basket-img btn-anime" type="submit">
+                      <button class="product-cart__basket-btn btn-anime" type="submit">
                         <svg class="product-cart__basket-svg">
                           <use xlink:href="images/sprite.svg#icons--cart"></use>
                         </svg>
@@ -497,11 +504,12 @@
                   </div>
                 </article>
               </li>
+
               <li class="product-cards__item mix drinks">
                 <article class="product-cart">
                   <div class="sale-box">
-                    <span class="hit hit">новинка</span>
-                    <span class="sale">-50%</span>
+
+                    <span class="hit hit--red">-30%</span>
                   </div>
                   <button class="product-cart__heart" type="button">
                     <svg class="product-cart__heart-svg">
@@ -510,29 +518,27 @@
                     <span class="sr-only">добавить товар в избранные</span>
                   </button>
                   <a class="product-cart__images" href="#">
-                    <img class="product-cart__img" src="images/carts/aranc.png" width="300" height="215" alt="Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
-                    безалкогольный" />
+                    <img class="product-cart__img" src="images/carts/aranc.png" width="300" height="215"
+                      alt="Перец оранжевый" />
                   </a>
-                  <h3 class="product-cart__title">
-                    Напиток сокосодержащий Sanpellegrino Aranciata Orange
-                    Красный апельсин безалкогольный
-                  </h3>
+                  <h4 class="product-cart__title">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
+                    безалкогольный</h4>
                   <div class="product-cart__footer">
                     <div class="product-cart__price">
-                      <span class="product-cart__price-old">1999 ₽ </span>
-                      <span class="product-cart__price-new">999 ₽ </span>
+                      <span class="product-cart__price-old">1999 <span>₽</span> </span>
+                      <span class="product-cart__price-new">999 <span>₽</span> </span>
                     </div>
                     <form class="quantity-inner">
-                      <button class="bt-minus btn-anime" type="submit">
+                      <button class="bt-minus btn-anime" type="button">
                         <span class="sr-only">уменьшить количество товара</span>
                       </button>
                       <label class="quantity-label">
                         <input type="number" class="quantity" name="quantity" value="1" data-max-count="99" />
                       </label>
-                      <button class="bt-plus btn-anime" type="submit">
+                      <button class="bt-plus btn-anime" type="button">
                         <span class="sr-only">увеличить количество товара</span>
                       </button>
-                      <button class="product-cart__basket-img btn-anime" type="submit">
+                      <button class="product-cart__basket-btn btn-anime" type="submit">
                         <svg class="product-cart__basket-svg">
                           <use xlink:href="images/sprite.svg#icons--cart"></use>
                         </svg>
@@ -542,11 +548,12 @@
                   </div>
                 </article>
               </li>
+
               <li class="product-cards__item mix grocery">
                 <article class="product-cart">
                   <div class="sale-box">
-                    <span class="hit hit">новинка</span>
-                    <span class="sale">-50%</span>
+                    <span class="hit">новинка</span>
+
                   </div>
                   <button class="product-cart__heart" type="button">
                     <svg class="product-cart__heart-svg">
@@ -556,27 +563,25 @@
                   </button>
                   <a class="product-cart__images" href="#">
                     <img class="product-cart__img" src="images/carts/caffe.png" width="300" height="215"
-                      alt="Кофе с коноплей органический Caffé Salomoni" />
+                      alt="Перец оранжевый" />
                   </a>
-                  <h3 class="product-cart__title">
-                    Кофе с коноплей органический Caffé Salomoni 250г
-                  </h3>
+                  <h4 class="product-cart__title">Кофе с коноплей органический Caffé Salomoni 250г</h4>
                   <div class="product-cart__footer">
                     <div class="product-cart__price">
-                      <span class="product-cart__price-old">1999 ₽ </span>
-                      <span class="product-cart__price-new">999 ₽ </span>
+
+                      <span class="product-cart__price-new">877 <span>₽</span> </span>
                     </div>
                     <form class="quantity-inner">
-                      <button class="bt-minus btn-anime" type="submit">
+                      <button class="bt-minus btn-anime" type="button">
                         <span class="sr-only">уменьшить количество товара</span>
                       </button>
                       <label class="quantity-label">
                         <input type="number" class="quantity" name="quantity" value="1" data-max-count="99" />
                       </label>
-                      <button class="bt-plus btn-anime" type="submit">
+                      <button class="bt-plus btn-anime" type="button">
                         <span class="sr-only">увеличить количество товара</span>
                       </button>
-                      <button class="product-cart__basket-img btn-anime" type="submit">
+                      <button class="product-cart__basket-btn btn-anime" type="submit">
                         <svg class="product-cart__basket-svg">
                           <use xlink:href="images/sprite.svg#icons--cart"></use>
                         </svg>
@@ -586,11 +591,12 @@
                   </div>
                 </article>
               </li>
+
               <li class="product-cards__item mix vegetables">
                 <article class="product-cart">
                   <div class="sale-box">
-                    <span class="hit hit">новинка</span>
-                    <span class="sale">-50%</span>
+                    <span class="hit">новинка</span>
+                    <span class="hit hit--red">-50%</span>
                   </div>
                   <button class="product-cart__heart" type="button">
                     <svg class="product-cart__heart-svg">
@@ -602,23 +608,23 @@
                     <img class="product-cart__img" src="images/carts/pepper.png" width="300" height="215"
                       alt="Перец оранжевый" />
                   </a>
-                  <h3 class="product-cart__title">Перец оранжевый, 1кг</h3>
+                  <h4 class="product-cart__title">Перец оранжевый, 1кг</h4>
                   <div class="product-cart__footer">
                     <div class="product-cart__price">
-                      <span class="product-cart__price-old">1999 ₽ </span>
-                      <span class="product-cart__price-new">999 ₽ </span>
+                      <span class="product-cart__price-old">1999 <span>₽</span> </span>
+                      <span class="product-cart__price-new">999 <span>₽</span> </span>
                     </div>
                     <form class="quantity-inner">
-                      <button class="bt-minus btn-anime" type="submit">
+                      <button class="bt-minus btn-anime" type="button">
                         <span class="sr-only">уменьшить количество товара</span>
                       </button>
                       <label class="quantity-label">
                         <input type="number" class="quantity" name="quantity" value="1" data-max-count="99" />
                       </label>
-                      <button class="bt-plus btn-anime" type="submit">
+                      <button class="bt-plus btn-anime" type="button">
                         <span class="sr-only">увеличить количество товара</span>
                       </button>
-                      <button class="product-cart__basket-img btn-anime" type="submit">
+                      <button class="product-cart__basket-btn btn-anime" type="submit">
                         <svg class="product-cart__basket-svg">
                           <use xlink:href="images/sprite.svg#icons--cart"></use>
                         </svg>
@@ -628,8 +634,9 @@
                   </div>
                 </article>
               </li>
+
             </ul>
-            <button class="btn-more btn" type="button">Показать еще</button>
+            <button class="btn btn--transparent" type="button">Показать еще</button>
           </div>
         </div>
       </div>
@@ -641,7 +648,7 @@
           <li class="banner__item banner__item--big" style="background-image: url(images/bg/fruits1.jpg)">
             <span class="banner__text banner__text--big">свежайшие фрукты</span>
             <h2 class="banner__title banner__title--big">
-              начни фруктовое лето всего от 99 ₽
+              начни фруктовое лето всего от 99 <span>₽</span>
             </h2>
             <a class="banner__link banner__link--big link-size" href="#">перейти к покупкам</a>
           </li>
@@ -661,177 +668,230 @@
 
     <section class="promo" data-ref="promo-cards">
       <div class="container">
-        <h2 class="title">акции</h2>
+        <h2 class="title">
+          акции
+        </h2>
         <ul class="filter-product-card filter__promo">
+
           <li class="filter-product-card__item">
             <button class="filter-product-card__btn" type="button" data-filter="all">
               все товары
             </button>
           </li>
+
           <li class="filter-product-card__item">
             <button class="filter-product-card__btn" type="button" data-filter=".new ">
               новинки
             </button>
           </li>
+
           <li class="filter-product-card__item">
             <button class="filter-product-card__btn" type="button" data-filter=".hits">
               хиты
             </button>
           </li>
+
         </ul>
+
         <ul class="promo__cards">
+
           <li class="promo__list mix new">
             <article class="promo-cart">
-              <span class="promo-cart__sale-hit">новинка</span>
-              <a href="">
+              <div class="sale-box">
+                <span class="hit">новинка</span>
+              </div>
+              <a href="#">
                 <img class="promo-cart__img" src="images/carts/pineapple.png" width="100" height="100" alt="ананас" />
               </a>
               <div class="promo-cart__box">
-                <h6 class="promo-cart__title">ананас, 1 кг</h6>
+                <h3 class="promo-cart__title">Ананас, 1 кг</h3>
                 <div class="promo-cart__price">
                   <span class="promo-cart__info">в наличии</span>
-                  <span class="promo-cart__price-old">1999 ₽ </span>
-                  <span class="promo-cart__price-new">999 ₽ </span>
-                  <span class="promo-cart__star">4.5 </span>
-                  <span class="star" data-rateyo-rating="4.5"></span>
+                  <div class="promo-cart__inner">
+                    <span class="promo-cart__price-new">999<small>₽</small></span>
+                    <span class="promo-cart__price-old">1999<span> ₽</span></span>
+                    <div class="promo-cart__star-box">
+                      <span class="promo-cart__star">4.5 </span>
+                      <span class="star" data-rateyo-rating="4.5"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
           </li>
+
           <li class="promo__list mix new">
             <article class="promo-cart">
-              <span class="promo-cart__sale-hit">новинка</span>
-              <a href="">
-                <img class="promo-cart__img" src="images/carts/caffe.png" width="100" height="100" alt="" />
-              </a>
-              <div class="promo-cart__box">
-                <h class="promo-cart__title">кофе с коноплей органический caffé salomoni 250г</h>
-                <div class="promo-cart__price">
-                  <span class="promo-cart__info promo-cart__info--end">заканчивается</span>
-                  <span class="promo-cart__price-old">1999 ₽ </span>
-                  <span class="promo-cart__price-new">999 ₽ </span>
-                  <span class="promo-cart__star">4.5 </span>
-                  <span class="star" data-rateyo-rating="4.5"></span>
-                </div>
+              <div class="sale-box">
+                <span class="hit">новинка</span>
               </div>
-            </article>
-          </li>
-          <li class="promo__list mix hits">
-            <article class="promo-cart">
-              <span class="promo-cart__sale-hit">новинка</span>
-              <a href="">
-                <img class="promo-cart__img" src="images/carts/strawberry.png" width="100" height="100"
-                  alt="клубника" />
-              </a>
-              <div class="promo-cart__box">
-                <h3 class="promo-cart__title">клубника, 1 кг</h3>
-                <div class="promo-cart__price">
-                  <span class="promo-cart__info">в наличии</span>
-                  <span class="promo-cart__price-old">1999 ₽ </span>
-                  <span class="promo-cart__price-new">999 ₽ </span>
-                  <span class="promo-cart__star">4.5 </span>
-                  <span class="star" data-rateyo-rating="4.5"></span>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li class="promo__list mix hits">
-            <article class="promo-cart">
-              <span class="promo-cart__sale-hit">новинка</span>
               <a href="#">
-                <img class="promo-cart__img" src="images/carts/mango.png" width="100" height="100" alt="манго" />
+                <img class="promo-cart__img" src="images/carts/caffe.png" width="100" height="100" alt="ананас" />
               </a>
               <div class="promo-cart__box">
-                <h3 class="promo-cart__title">манго, 1 шт</h3>
+                <h3 class="promo-cart__title">Кофе с коноплей органический Caffé Salomoni 250г</h3>
                 <div class="promo-cart__price">
                   <span class="promo-cart__info">в наличии</span>
-                  <span class="promo-cart__price-old">1999 ₽ </span>
-                  <span class="promo-cart__price-new">999 ₽ </span>
-                  <span class="promo-cart__star">4.5 </span>
-                  <span class="star" data-rateyo-rating="4.5"></span>
+                  <div class="promo-cart__inner">
+                    <span class="promo-cart__price-new">999<small>₽</small></span>
+                    <span class="promo-cart__price-old">1999<span> ₽</span></span>
+                    <div class="promo-cart__star-box">
+                      <span class="promo-cart__star">4.9 </span>
+                      <span class="star" data-rateyo-rating="4.9"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
           </li>
           <li class="promo__list mix new">
             <article class="promo-cart">
-              <span class="promo-cart__sale-hit">новинка</span>
+              <div class="sale-box">
+                <span class="hit">новинка</span>
+              </div>
+              <a href="#">
+                <img class="promo-cart__img" src="images/carts/strawberry.png" width="100" height="100" alt="ананас" />
+              </a>
+              <div class="promo-cart__box">
+                <h3 class="promo-cart__title">Клубника, 1 кг</h3>
+                <div class="promo-cart__price">
+                  <span class="promo-cart__info promo-cart__info--absent">нет в наличии</span>
+                  <div class="promo-cart__inner">
+                    <span class="promo-cart__price-new">440<small>₽</small></span>
+                    <span class="promo-cart__price-old">600<span> ₽</span></span>
+                    <div class="promo-cart__star-box">
+                      <span class="promo-cart__star">5.0 </span>
+                      <span class="star" data-rateyo-rating="5.0"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="promo__list mix new">
+            <article class="promo-cart">
+              <div class="sale-box">
+                <span class="hit">новинка</span>
+              </div>
+              <a href="#">
+                <img class="promo-cart__img" src="images/carts/mango.png" width="100" height="100" alt="ананас" />
+              </a>
+              <div class="promo-cart__box">
+                <h3 class="promo-cart__title">Манго, 1 шт</h3>
+                <div class="promo-cart__price">
+                  <span class="promo-cart__info">в наличии</span>
+                  <div class="promo-cart__inner">
+                    <span class="promo-cart__price-new">999<small>₽</small></span>
+                    <span class="promo-cart__price-old">1999<span> ₽</span></span>
+                    <div class="promo-cart__star-box">
+                      <span class="promo-cart__star">4.5 </span>
+                      <span class="star" data-rateyo-rating="4.5"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="promo__list mix new">
+            <article class="promo-cart">
+              <div class="sale-box">
+                <span class="hit">новинка</span>
+              </div>
               <a href="#">
                 <img class="promo-cart__img" src="images/carts/salmon.png" width="100" height="100" alt="лосось" />
               </a>
               <div class="promo-cart__box">
-                <h3 class="promo-cart__title">лосось, 1 кг</h3>
+                <h3 class="promo-cart__title">Лосось, 1 кг</h3>
                 <div class="promo-cart__price">
                   <span class="promo-cart__info">в наличии</span>
-                  <span class="promo-cart__price-old">1999 ₽ </span>
-                  <span class="promo-cart__price-new">999 ₽ </span>
-                  <span class="promo-cart__star">4.5 </span>
-                  <span class="star" data-rateyo-rating="4.5"></span>
+                  <div class="promo-cart__inner">
+                    <span class="promo-cart__price-new">999<small>₽</small></span>
+                    <span class="promo-cart__price-old">1999<span> ₽</span></span>
+                    <div class="promo-cart__star-box">
+                      <span class="promo-cart__star">4.5 </span>
+                      <span class="star" data-rateyo-rating="4.5"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
           </li>
-          <li class="promo__list mix new">
+          <li class="promo__list mix hits">
             <article class="promo-cart">
-              <span class="promo-cart__sale-hit promo-cart__sale-hit--accent">хит</span>
+              <div class="sale-box">
+                <span class="hit hit--orange">хит</span>
+              </div>
               <a href="#">
-                <img class="promo-cart__img" src="images/carts/veg_juice.png" width="100" height="100"
-                  alt="сок овощной" />
+                <img class="promo-cart__img" src="images/carts/veg_juice.png" width="100" height="100" alt="ананас" />
               </a>
               <div class="promo-cart__box">
-                <h3 class="promo-cart__title">
-                  сок granini овощной 100%, 0.5л
-                </h3>
+                <h3 class="promo-cart__title">Сок Granini овощной 100%, 0.5л</h3>
                 <div class="promo-cart__price">
                   <span class="promo-cart__info">в наличии</span>
-                  <span class="promo-cart__price-old">1999 ₽ </span>
-                  <span class="promo-cart__price-new">999 ₽ </span>
-                  <span class="promo-cart__star">4.5 </span>
-                  <span class="star" data-rateyo-rating="4.5"></span>
+                  <div class="promo-cart__inner">
+                    <span class="promo-cart__price-new">999<small>₽</small></span>
+                    <span class="promo-cart__price-old">1999<span> ₽</span></span>
+                    <div class="promo-cart__star-box">
+                      <span class="promo-cart__star">4.5 </span>
+                      <span class="star" data-rateyo-rating="4.5"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
           </li>
-          <li class="promo__list mix new">
+          <li class="promo__list mix hits">
             <article class="promo-cart">
-              <span class="promo-cart__sale-hit promo-cart__sale-hit--accent">хит</span>
-              <a href="">
-                <img class="promo-cart__img" src="images/carts/basket.png" width="100" height="100" alt="" />
-              </a>
-              <div class="promo-cart__box">
-                <h3 class="promo-cart__title">фруктовая корзина, 1 шт</h3>
-                <div class="promo-cart__price">
-                  <span class="promo-cart__info">в наличии</span>
-                  <span class="promo-cart__price-old">1999 ₽ </span>
-                  <span class="promo-cart__price-new">999 ₽ </span>
-                  <span class="promo-cart__star">4.9 </span>
-                  <span class="star" data-rateyo-rating="4.9"></span>
-                </div>
+              <div class="sale-box">
+                <span class="hit hit--orange">хит</span>
               </div>
-            </article>
-          </li>
-          <li class="promo__list mix new">
-            <article class="promo-cart">
-              <span class="promo-cart__sale-hit promo-cart__sale-hit--accent">хит</span>
               <a href="#">
-                <img class="promo-cart__img" src="images/carts/svinina.png" width="100" height="100"
-                  alt="свинина мякоть" />
+                <img class="promo-cart__img" src="images/carts/basket.png" width="100" height="100" alt="ананас" />
               </a>
               <div class="promo-cart__box">
-                <h3 class="promo-cart__title">свинина мякоть, 1 кг</h3>
+                <h3 class="promo-cart__title">Фруктовая корзина, 1 шт</h3>
                 <div class="promo-cart__price">
                   <span class="promo-cart__info">в наличии</span>
-                  <span class="promo-cart__price-old">1999 ₽ </span>
-                  <span class="promo-cart__price-new">999 ₽ </span>
-                  <span class="promo-cart__star">5.0</span>
-                  <span class="star" data-rateyo-rating="5.0"></span>
+                  <div class="promo-cart__inner">
+                    <span class="promo-cart__price-new">999<small>₽</small></span>
+                    <span class="promo-cart__price-old">1999<span> ₽</span></span>
+                    <div class="promo-cart__star-box">
+                      <span class="promo-cart__star">4.5 </span>
+                      <span class="star" data-rateyo-rating="4.5"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
           </li>
+          <li class="promo__list mix hits">
+            <article class="promo-cart">
+              <div class="sale-box">
+                <span class="hit hit--orange">хит</span>
+              </div>
+              <a href="#">
+                <img class="promo-cart__img" src="images/carts/svinina.png" width="100" height="100" alt="ананас" />
+              </a>
+              <div class="promo-cart__box">
+                <h3 class="promo-cart__title">Свинина мякоть, 1 кг</h3>
+                <div class="promo-cart__price">
+                  <span class="promo-cart__info">в наличии</span>
+                  <div class="promo-cart__inner">
+                    <span class="promo-cart__price-new">999<small>₽</small></span>
+                    <span class="promo-cart__price-old">1999<span> ₽</span></span>
+                    <div class="promo-cart__star-box">
+                      <span class="promo-cart__star">4.5 </span>
+                      <span class="star" data-rateyo-rating="4.5"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+
         </ul>
         <button class="promo__btn btn btn-anime" type="button">
-          показать еще
+          Показать еще
         </button>
       </div>
     </section>
@@ -841,47 +901,47 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide slide">
             <a class="swiper-link" href="#">
-              <img class="swiper-img" src="./images/slide/cocacola.png" alt="кока кола" />
+              <img class="swiper-img" src="images/slide/cocacola.png" alt="кока кола" />
             </a>
           </div>
           <div class="swiper-slide slide">
             <a class="swiper-link" href="#">
-              <img class="swiper-img" src="./images/slide/dr-pepper-4.png" alt="пеппер" />
+              <img class="swiper-img" src="images/slide/dr-pepper-4.png" alt="пеппер" />
             </a>
           </div>
           <div class="swiper-slide slide">
             <a class="swiper-link" href="#">
-              <img class="swiper-img" src="./images/slide/fanta.png" alt="фанта" />
+              <img class="swiper-img" src="images/slide/fanta.png" alt="фанта" />
             </a>
           </div>
           <div class="swiper-slide slide">
             <a class="swiper-link" href="#">
-              <img class="swiper-img" src="./images/slide/pepsi.png" alt="пепси" />
+              <img class="swiper-img" src="images/slide/pepsi.png" alt="пепси" />
             </a>
           </div>
           <div class="swiper-slide slide">
             <a class="swiper-link" href="#">
-              <img class="swiper-img" src="./images/slide/redbull.png" alt="ред бул" />
+              <img class="swiper-img" src="images/slide/redbull.png" alt="ред бул" />
             </a>
           </div>
           <div class="swiper-slide slide">
             <a class="swiper-link" href="#">
-              <img class="swiper-img" src="./images/slide/sprite.png" alt="спрайт" />
+              <img class="swiper-img" src="images/slide/sprite.png" alt="спрайт" />
             </a>
           </div>
           <div class="swiper-slide slide">
             <a class="swiper-link" href="#">
-              <img class="swiper-img" src="./images/slide/cocacola.png" alt="кока кола" />
+              <img class="swiper-img" src="images/slide/cocacola.png" alt="кока кола" />
             </a>
           </div>
           <div class="swiper-slide slide">
             <a class="swiper-link" href="#">
-              <img class="swiper-img" src="./images/slide/dr-pepper-4.png" alt="пеппер" />
+              <img class="swiper-img" src="images/slide/dr-pepper-4.png" alt="пеппер" />
             </a>
           </div>
           <div class="swiper-slide slide">
             <a class="swiper-link" href="#">
-              <img class="swiper-img" src="./images/slide/fanta.png" alt="фанта" />
+              <img class="swiper-img" src="images/slide/fanta.png" alt="фанта" />
             </a>
           </div>
         </div>
@@ -903,31 +963,37 @@
                 <span class="news__month">июль</span>
                 <span class="news__date">15</span>
               </div>
-              <img src="./images/bg/images.jpg" width="410" height="240" alt="фрукты" />
-              <p>
-                событие этого лета: распродажа сезонных фруктов в
-                онлайн-маркете фрешок. торопись, пока всё не разобрали!
-              </p>
+              <img class="news__img" src="images/bg/images.jpg" width="410" height="240" alt="фрукты" />
+              <div class="news__text">
+                <p>
+                  Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не
+                  разобрали!
+                </p>
+              </div>
             </a>
           </li>
           <li class="news__item">
             <a href="#">
               <div class="news__date-box">
-                <span class="news__month">июль</span>
-                <span class="news__date">15</span>
+                <span class="news__month">май</span>
+                <span class="news__date">07</span>
               </div>
-              <img src="./images/bg/images1.jpg" width="410" height="240" alt="фрукты" />
-              <p>шикарнейший выбор манго в нашем онлайн-маркете</p>
+              <img class="news__img" src="images/bg/images1.jpg" width="410" height="240" alt="фрукты" />
+              <div class="news__text">
+                <p>Шикарнейший выбор манго в нашем онлайн-маркете</p>
+              </div>
             </a>
           </li>
           <li class="news__item">
             <a href="#">
               <div class="news__date-box">
-                <span class="news__month">июль</span>
-                <span class="news__date">15</span>
+                <span class="news__month">февраль</span>
+                <span class="news__date">20</span>
               </div>
-              <img src="./images/bg/images2.jpg" width="410" height="240" alt="фрукты" />
-              <p>всё, что вы хотели знать о папайя</p>
+              <img class="news__img" src="images/bg/images2.jpg" width="410" height="240" alt="фрукты" />
+              <div class="news__text">
+                <p>Всё, что вы хотели знать о папайя</p>
+              </div>
             </a>
           </li>
         </ul>
@@ -955,16 +1021,26 @@
           <ul class="footer__center">
             <li class="footer__item">
               <a class="footer__link anime-link link-size" href="#">о нас</a>
+            </li>
+            <li class="footer__item">
               <a class="footer__link anime-link link-size" href="#">контакты</a>
+            </li>
+            <li class="footer__item">
               <a class="footer__link anime-link link-size" href="#">публичная оферта</a>
             </li>
             <li class="footer__item">
               <a class="footer__link anime-link link-size" href="#">оплата и доставка</a>
+            </li>
+            <li class="footer__item">
               <a class="footer__link anime-link link-size" href="#">вакансии</a>
+            </li>
+            <li class="footer__item">
               <a class="footer__link anime-link link-size" href="#">акции</a>
             </li>
             <li class="footer__item">
               <a class="footer__link anime-link link-size" href="#">отзывы</a>
+            </li>
+            <li class="footer__item">
               <a class="footer__link anime-link link-size" href="#">новости</a>
             </li>
           </ul>
@@ -1031,6 +1107,7 @@
         <button class="basket__btn-close"></button>
       </div>
       <div class="basket__product">
+
         <article class="basket__cart">
           <a href="#">
             <img class="basket__img" src="images/carts/svinina.png" width="60" height="60" alt="мясо свинина" />
@@ -1038,8 +1115,8 @@
           <div class="basket__box">
             <h6 class="basket__title-text">свинина мякоть, 1 кг</h6>
             <div class="basket__price-box">
-              <span class="basket__price">1999 ₽ </span>
-              <form class="basket-inner quantity-inner">
+              <span class="basket__price">1999 <span>₽</span> </span>
+              <form class="basket-inner">
                 <button class="btn-minus bt-minus" type="button"></button>
                 <label class="quantity-label">
                   <input type="number" class="basket__input quantity" name="quantity" value="1" data-max-count="99" />
@@ -1047,53 +1124,14 @@
                 <button class="btn-plus bt-plus" type="button"></button>
               </form>
             </div>
-            <span class="basket__result">999 ₽ </span>
+            <span class="basket__result">999 <span>₽</span> </span>
           </div>
         </article>
 
-        <article class="basket__cart">
-          <a href="#">
-            <img class="basket__img" src="images/carts/pineapple.png" width="60" height="60" alt="ананас" />
-          </a>
-          <div class="basket__box">
-            <h6 class="basket__title-text">свинина мякоть, 1 кг</h6>
-            <div class="basket__price-box">
-              <span class="basket__price">1999 ₽ </span>
-              <form class="basket-inner quantity-inner">
-                <button class="btn-minus bt-minus" type="button"></button>
-                <label class="quantity-label">
-                  <input type="number" class="basket__input quantity" name="quantity" value="1" data-max-count="99" />
-                </label>
-                <button class="btn-plus bt-plus" type="button"></button>
-              </form>
-            </div>
-            <span class="basket__result">999 ₽ </span>
-          </div>
-        </article>
-
-        <article class="basket__cart">
-          <a href="#">
-            <img class="basket__img" src="images/carts/lemon.png" width="60" height="60" alt="лимон" />
-          </a>
-          <div class="basket__box">
-            <h6 class="basket__title-text">свинина мякоть, 1 кг</h6>
-            <div class="basket__price-box">
-              <span class="basket__price">1999 ₽ </span>
-              <form class="basket-inner quantity-inner">
-                <button class="btn-minus bt-minus" type="button"></button>
-                <label class="quantity-label">
-                  <input type="number" class="basket__input quantity" name="quantity" value="1" data-max-count="99" />
-                </label>
-                <button class="btn-plus bt-plus" type="button"></button>
-              </form>
-            </div>
-            <span class="basket__result">999 ₽ </span>
-          </div>
-        </article>
       </div>
       <div class="basket__footer">
         <span class="basket__amount"> товаров на сумму </span>
-        <span class="basket__num">2038₽ </span>
+        <span class="basket__num">2038<span>₽</span> </span>
       </div>
       <button class="btn basket__btn btn-anime">оформить заказ</button>
     </div>
