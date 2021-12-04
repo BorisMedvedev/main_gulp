@@ -1,5 +1,4 @@
-"use strict";
-const { src, dest, watch, parallel, series } = require("gulp");
+const { task, src, dest, watch, parallel, series } = require("gulp");
 const scss = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
 const autoprefixer = require("gulp-autoprefixer");
@@ -7,6 +6,7 @@ const tiny = require("gulp-tinypng-compress");
 const uglify = require("gulp-uglify");
 const del = require("del");
 const browserSync = require("browser-sync").create();
+const svgo = require("gulp-svgo");
 const svgSprite = require("gulp-svg-sprite");
 
 function scripts() {
@@ -21,11 +21,33 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
+
+task('svg', () => {
+  return src("app/images/**/*.svg")
+    .pipe(svgo({
+      plugins: [
+        {
+          removeAttrs: { attrs: '(fill|srtoke|style|width|height|data.*)' }
+        }
+      ]
+    }))
+    .pipe(
+      svgSprite({
+        mode: {
+          symbol: {
+            sprite: "../sprite.svg",
+          }
+        }
+      }))
+    .pipe(dest("./app/images"));
+});
+
+
 const tinypng = () => {
   return src(
-    "./app/images/**.jpg",
-    "./app/images/**.png",
-    "./app/images/**.jpeg"
+    "app/images/**.jpg",
+    "app/images/**.png",
+    "app/images/**.jpeg"
   )
     .pipe(
       tiny({
@@ -33,7 +55,7 @@ const tinypng = () => {
         log: true,
       })
     )
-    .pipe(dest("./app/images"));
+    .pipe(dest("app/images"));
 };
 
 function browsersync() {
@@ -49,10 +71,10 @@ function browsersync() {
 
 const imgToApp = () => {
   return src([
-    "./app/images/**/*.png",
-    "./app/images/**/*.jpg",
-    "./app/images/**/*.jpeg",
-  ]).pipe(dest("./app/images"));
+    "app/images/**/*.png",
+    "app/images/**/*.jpg",
+    "app/images/**/*.jpeg",
+  ]).pipe(dest("app/images"));
 };
 
 function styles() {
@@ -71,20 +93,7 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
-const svgSprites = () => {
-  return src("./app/images/**/*.svg")
-    .pipe(
-      svgSprite({
-        mode: {
-          stack: {
-            sprite: "../sprite.svg",
-          },
-        },
-      })
-    )
 
-    .pipe(dest("./app/images"));
-};
 
 function build() {
   return src(["app/**/*.html",
@@ -102,15 +111,14 @@ function cleanDist() {
 
 function watching() {
   watch(["app/scss/**/*.scss"], styles);
-  watch("./app/images/**/*.svg", svgSprites);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/**/*.html"]).on("change", browserSync.reload);
 }
 
 
+
 exports.styles = styles;
 exports.scripts = scripts;
-exports.svgSprite = svgSprite;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.cleanDist = cleanDist;

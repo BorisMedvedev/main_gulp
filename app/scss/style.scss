@@ -44,19 +44,20 @@
     position: relative;
     padding-left: 44px;
 
-    &--tel {
-      padding-left: 34px;
-    }
   }
 
   &__svg {
     display: block;
     position: absolute;
     top: -4px;
-    left: 0;
+    left: -40px;
     width: 32px;
     height: 22px;
     fill: $white;
+
+    &--tel {
+      left: -31px;
+    }
   }
 }
 
@@ -100,6 +101,13 @@
     height: 17px;
   }
 
+  &__chevron-right {
+    position: absolute;
+    right: 18px;
+    width: 10px;
+    height: 7px;
+  }
+
   &__btn {
     position: relative;
     display: block;
@@ -126,9 +134,10 @@
     box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.19);
     visibility: hidden;
     opacity: 0;
+    display: flex;
     visibility: hidden;
     transform: scale(0);
-    transition: 0.5s;
+    transition: 0.3s;
     z-index: 100;
 
     &--active {
@@ -525,7 +534,6 @@
     line-height: 1.4;
     color: $dark-900;
     @include line-clamp(1);
-
   }
 
   &__text {
@@ -591,15 +599,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 18px;
-
   }
 
   &__item {
     margin-bottom: 30px;
-
-
   }
-
 }
 
 .product-cart {
@@ -696,7 +700,6 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
-
   }
 
   &__price {
@@ -739,6 +742,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    fill: $white;
     z-index: 999;
   }
 }
@@ -809,7 +813,6 @@
   border-radius: 0 3px 3px 0;
   color: $white;
   transform: translateX(-8px);
-
 
   &::before {
     @include pseudo;
@@ -1015,14 +1018,14 @@
     &--cart {
       width: 93px;
       height: 29px;
-      background-image: url("../images/sprite.svg#social--visa");
+      background-image: url("../images/sprite.svg#icons--visa");
       margin-right: 20px;
     }
 
     &--ms {
       width: 49px;
       height: 29px;
-      background-image: url("../images/sprite.svg#social--mc");
+      background-image: url("../images/sprite.svg#icons--mc");
     }
   }
 }
@@ -1099,8 +1102,6 @@
   }
 }
 
-
-
 .promo {
   padding: 72px 0;
   background-color: $silver-100;
@@ -1116,7 +1117,6 @@
     display: block;
     margin: 0 auto;
   }
-
 
   &__list {
     max-width: 300px;
@@ -1151,7 +1151,6 @@
   }
 
   &__inner {
-
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -1186,18 +1185,15 @@
     }
 
     &--absent {
-      color: #C1C1C1;
+      color: #c1c1c1;
     }
   }
-
-
 
   &__price-new {
     font-weight: 600;
     font-size: 20px;
     letter-spacing: 0.03em;
     color: $dark-500;
-
   }
 
   &__price-old {
@@ -1207,7 +1203,6 @@
     line-height: 100%;
     letter-spacing: 0.03em;
     color: $silver-600;
-
 
     &::before {
       @include pseudo;
@@ -1224,7 +1219,6 @@
 
   &__img {
     margin-right: 12px;
-
   }
 
   &__star {
