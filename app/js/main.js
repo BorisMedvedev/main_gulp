@@ -41,7 +41,7 @@ $(function () {
 
 
 
-  $(".basket-btn").on("click", function () {
+  $(".navbar-btn--cart").on("click", function () {
     $('.basket').toggleClass("basket--active");
     $('.overlay').toggleClass("overlay--active");
 

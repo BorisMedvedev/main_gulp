@@ -6,13 +6,13 @@
 @import "mixins";
 
 .header {
-  transition-property: opacity;
-  transition-duration: 0.8s,
-    0.5s;
+  transition-property: opacity 1s;
+  transition-duration: 1s,
+    1s;
 
   &--fixid {
     position: fixed;
-    opacity: 0.8;
+    opacity: 0.9;
     top: 0;
     width: 100%;
     z-index: 9999;
@@ -274,80 +274,82 @@
   }
 }
 
+
+
 .navbar {
   max-width: 170px;
   width: 100%;
   display: flex;
   justify-content: space-between;
 
-  &__item {
-    width: 50px;
-    height: 50px;
-  }
-
-  &__link {
-    position: relative;
-    display: block;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    outline: 0;
-    z-index: 30;
-    transition: background-color 0.2s;
-
-    &:focus {
-      background-color: rgba(255, 255, 255, 0.1);
-      box-shadow: inset 0 0 0 3px $box-shadow-focus;
-      border-radius: 3px;
-    }
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 3px;
-    }
-
-    &:active {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 3px;
-    }
-
-    &::before {
-      @include pseudo;
-      width: 35px;
-      height: 32px;
-      top: 8px;
-      left: 6px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    &--user::before {
-      filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
-      background-image: url("../images/sprite.svg#user");
-    }
-
-    &--heart::before {
-      filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
-      background-image: url("../images/sprite.svg#heart");
-    }
-
-    &--cart::before {
-      filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
-      background-image: url("../images/sprite.svg#cart");
-    }
-  }
-
   &__num {
     position: absolute;
     top: 3px;
-    left: 2px;
+    right: 30px;
     padding: 4px;
     line-height: 1.1;
     font-size: 10px;
     color: $red-900;
     background-color: $white;
-    border-radius: 50%;
+    border-radius: 50px;
+  }
+}
+
+.navbar-menu {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar-btn {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  outline: 0;
+  z-index: 30;
+  transition: background-color 0.2s;
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 3px $box-shadow-focus;
+    border-radius: 3px;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+
+  &::before {
+    @include pseudo;
+    width: 35px;
+    height: 32px;
+    top: 8px;
+    left: 6px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &--user::before {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
+    background-image: url("../images/sprite.svg#user");
+  }
+
+  &--heart::before {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
+    background-image: url("../images/sprite.svg#heart");
+  }
+
+  &--cart::before {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
+    background-image: url("../images/sprite.svg#cart");
   }
 }
 
@@ -697,38 +699,6 @@
     }
   }
 
-  &__heart {
-    position: absolute;
-    top: 8px;
-    right: 6px;
-    width: 44px;
-    height: 44px;
-
-    &:focus {
-      background-color: rgba(255, 255, 255, 0.0001);
-      box-shadow: 0 0 0 3px $green-200;
-      border-radius: 3px;
-    }
-  }
-
-  &__heart-svg {
-    position: absolute;
-    top: 8px;
-    left: 6px;
-    width: 32px;
-    height: 29px;
-    fill: $silver-600;
-    transition: fill 0.2s;
-
-    &:hover {
-      fill: $yellow-900;
-    }
-
-    &:active {
-      fill: rgba(255, 184, 0, 0.5);
-    }
-  }
-
   &__title {
     flex: auto;
     max-width: 262px;
@@ -789,6 +759,38 @@
     transform: translate(-50%, -50%);
     fill: $white;
     z-index: 999;
+  }
+}
+
+.heart-btn {
+  position: absolute;
+  top: 8px;
+  right: 6px;
+  width: 44px;
+  height: 44px;
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.0001);
+    box-shadow: 0 0 0 3px $green-200;
+    border-radius: 3px;
+  }
+
+  &__heart-svg {
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    width: 32px;
+    height: 29px;
+    fill: $silver-600;
+    transition: fill 0.2s;
+
+    &:hover {
+      fill: $yellow-900;
+    }
+
+    &:active {
+      fill: rgba(255, 184, 0, 0.5);
+    }
   }
 }
 
@@ -1021,10 +1023,9 @@
 }
 
 .social {
-  &__list {
-    display: flex;
-    padding-right: 50px;
-  }
+  display: flex;
+  padding-right: 50px;
+
 
   &__item {
     &:not(:last-child) {
@@ -1184,7 +1185,7 @@
   padding: 12px 8px 7px 12px;
   max-width: 300px;
   width: 100%;
-  border: 1px solid #c1c1c1;
+  border: 1px solid $silver-600;
   background-color: $white;
   border-radius: 6px;
   transition: box-shadow 0.2s, border-color 0.2s;
@@ -1238,7 +1239,7 @@
     }
 
     &--absent {
-      color: #c1c1c1;
+      color: $silver-600;
     }
   }
 
@@ -1259,8 +1260,8 @@
 
     &::before {
       @include pseudo;
-      left: -2px;
-      top: -16px;
+      left: 2px;
+      top: -21px;
       width: 32px;
       height: 50px;
       background-repeat: no-repeat;
@@ -1351,15 +1352,18 @@
   }
 
   &__text {
+    display: block;
+    max-width: 410px;
     padding: 21px;
     font-size: 16px;
     font-weight: 600;
     @include line-clamp(3);
+
+    & span {
+      @include line-clamp(3);
+    }
   }
 
-  &__text p {
-    @include line-clamp(3);
-  }
 
   &__box {
     display: flex;
