@@ -1387,10 +1387,11 @@
   justify-content: space-between;
   max-width: 476px;
   width: 100%;
-  background-color: $green-200;
+  background-color: $silver-100;
   box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.19);
   z-index: 999;
   opacity: 0;
+
   visibility: hidden;
   transform: scale(0);
   transition: 0.5s;
@@ -1407,8 +1408,9 @@
   &__cart {
     position: relative;
     display: flex;
+    justify-content: space-between;
     padding: 12px;
-    align-items: center;
+    align-items: end;
     max-width: 450px;
     width: 100%;
     height: 84px;
@@ -1425,14 +1427,24 @@
   }
 
   &__title-text {
+    display: block;
+    max-width: 170px;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 5px;
+    @include line-clamp(2);
   }
 
   &__header {
     padding: 19px 24px 11px;
     background-color: $white;
+  }
+
+  &__inner {
+    max-width: 143px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__price {
@@ -1457,11 +1469,17 @@
   }
 
   &__footer {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
     padding: 24px;
     font-size: 24px;
     color: $dark-900;
     background-color: $white;
+  }
+
+  &__num {
+    font-weight: 600;
+    font-size: 24px;
   }
 
   &__btn {
@@ -1471,26 +1489,12 @@
   }
 
   &__result {
-    position: absolute;
-    bottom: 14px;
-    right: 13px;
+    display: inherit;
     font-weight: 600;
     font-size: 20px;
     color: $dark-500;
   }
 
-  &__input {
-    height: 25px;
-    border: none;
-    background-color: rgba(99, 166, 14, 0.1);
-  }
-
-  &__num {
-    position: absolute;
-    right: 24px;
-    top: 26px;
-    font-weight: 600;
-  }
 
   &__btn-close {
     position: relative;
@@ -1534,29 +1538,4 @@
       transform: rotate(-45deg);
     }
   }
-}
-
-.basket-inner {
-  top: 9px;
-  left: 140px;
-  display: flex;
-  align-items: center;
-}
-
-.btn-minus {
-  top: 0;
-  height: 25px;
-  left: 23px;
-  transform: translatey(0);
-  border-radius: 0;
-  z-index: 999;
-}
-
-.btn-plus {
-  top: 0;
-  height: 25px;
-  right: 23px;
-  transform: translatex(0);
-  border-radius: 0;
-  z-index: 999;
 }
