@@ -129,4 +129,11 @@ $(function () {
 
 
 
-
+var menu = $('.header');
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 0) {
+    menu.addClass('header--fixid');
+  } else {
+    menu.removeClass('header--fixid');
+  }
+});

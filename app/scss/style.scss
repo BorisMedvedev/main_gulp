@@ -6,6 +6,18 @@
 @import "mixins";
 
 .header {
+  transition-property: opacity;
+  transition-duration: 0.8s,
+    0.5s;
+
+  &--fixid {
+    position: fixed;
+    opacity: 0.8;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+
   &__top {
     padding: 14px 0;
     background-color: $dark-800;
@@ -311,16 +323,18 @@
     }
 
     &--user::before {
-      background-image: url("../images/sprite.svg#icons--user");
+      filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
+      background-image: url("../images/sprite.svg#user");
     }
 
     &--heart::before {
       filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
-      background-image: url("../images/sprite.svg#icons--heart");
+      background-image: url("../images/sprite.svg#heart");
     }
 
     &--cart::before {
-      background-image: url("../images/sprite.svg#icons--cart");
+      filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
+      background-image: url("../images/sprite.svg#cart");
     }
   }
 
@@ -406,7 +420,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 6px;
   transform: translatey(-50%);
-  z-index: 9999;
+  z-index: 99;
   transition: background-color 0.2s;
 
   &:focus {
@@ -452,7 +466,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 6px;
   transform: translatey(-50%);
-  z-index: 9999;
+  z-index: 99;
   transition: background-color 0.2s;
 
   &:focus {
@@ -518,7 +532,7 @@
   &__item::before {
     @include pseudo;
     left: 0;
-    width: 50px;
+    width: 54px;
     height: 50px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -526,15 +540,36 @@
   }
 
   &__item--scooter::before {
-    background-image: url("../images/sprite.svg#icons--scooter");
+    background-color: $green-900;
+    -webkit-mask-image: url("../images/sprite.svg#scooter");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-position: center;
+    mask-position: center;
   }
 
   &__item--box::before {
-    background-image: url("../images/sprite.svg#icons--return-box");
+    background-color: $green-900;
+    -webkit-mask-image: url("../images/sprite.svg#return-box");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-position: center;
+    mask-position: center;
   }
 
   &__item--hours::before {
-    background-image: url("../images/sprite.svg#icons--hours");
+    background-color: $green-900;
+    -webkit-mask-image: url("../images/sprite.svg#hours");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-position: center;
+    mask-position: center;
   }
 
   &__title {
@@ -732,7 +767,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      background-image: url(../images/sprite.svg#icons--line);
+      background-image: url('../images/sprite.svg#line');
     }
   }
 
@@ -917,8 +952,8 @@
 
   &__text {
     max-width: 309px;
-    margin-bottom: 27px;
     line-height: 1;
+    margin-bottom: 14px;
 
     & p {
       @include line-clamp(1);
@@ -1033,14 +1068,17 @@
     &--cart {
       width: 93px;
       height: 29px;
-      background-image: url("../images/sprite.svg#icons--visa");
+      filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
+      background-image: url("../images/sprite.svg#visa");
       margin-right: 20px;
     }
 
     &--ms {
       width: 49px;
       height: 29px;
-      background-image: url("../images/sprite.svg#icons--mc");
+      filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
+      background-image: url("../images/sprite.svg#mc");
+
     }
   }
 }
@@ -1228,7 +1266,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      background-image: url(../images/sprite.svg#icons--line);
+      background-image: url('../images/sprite.svg#line');
     }
   }
 

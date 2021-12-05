@@ -22,8 +22,8 @@ function scripts() {
 }
 
 
-task('svg', () => {
-  return src("app/images/**/*.svg")
+function svg() {
+  return src("app/images/icons/**/*.svg")
     .pipe(svgo({
       plugins: [
         {
@@ -34,13 +34,13 @@ task('svg', () => {
     .pipe(
       svgSprite({
         mode: {
-          symbol: {
+          stack: {
             sprite: "../sprite.svg",
           }
         }
       }))
-    .pipe(dest("./app/images"));
-});
+    .pipe(dest("app/images"));
+}
 
 
 const tinypng = () => {
@@ -110,6 +110,7 @@ function cleanDist() {
 }
 
 function watching() {
+  watch(["app/icons/**/*.svg"], svg);
   watch(["app/scss/**/*.scss"], styles);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/**/*.html"]).on("change", browserSync.reload);
@@ -122,6 +123,7 @@ exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.cleanDist = cleanDist;
+exports.svg = svg;
 exports.build = series(cleanDist, tinypng, build);
 
-exports.default = parallel(styles, scripts, browsersync, imgToApp, watching);
+exports.default = parallel(styles, svg, scripts, browsersync, imgToApp, watching);
