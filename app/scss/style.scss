@@ -99,13 +99,21 @@
     left: 18px;
     width: 25px;
     height: 17px;
+    fill: $green-900;
   }
 
   &__chevron-right {
     position: absolute;
-    right: 18px;
+    right: 14px;
     width: 10px;
     height: 7px;
+    top: 23px;
+    fill: $green-900;
+    transition: transform 0.2s;
+
+    &--active {
+      transform: rotate(180deg);
+    }
   }
 
   &__btn {
@@ -146,8 +154,10 @@
       visibility: visible;
       transform: scale(1);
       transition: 0.5s;
+
     }
   }
+
 
   &__item {
     &:not(:last-child) {
@@ -905,9 +915,14 @@
     justify-content: space-between;
   }
 
-  .footer__item p {
+  &__text {
+    max-width: 309px;
     margin-bottom: 27px;
-    line-height: 0;
+    line-height: 1;
+
+    & p {
+      @include line-clamp(1);
+    }
   }
 
   &__link {

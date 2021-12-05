@@ -34,6 +34,17 @@ $(function () {
   $(".catalog-goods__btn").on("click", function () {
     $('.catalog-goods__menu').toggleClass("catalog-goods__menu--active");
     $('.catalog-goods__btn').removeClass("catalog-goods__btn--active");
+    $('.catalog-goods__chevron-right').toggleClass("catalog-goods__chevron-right--active");
+
+    // не получилось
+    $(document).mouseup(function (e) {
+      var container = $('.catalog-goods__chevron-right'); // Указываем у какого блока / класса убираем
+      if (container.has(e.target).length === 0) {
+        container.removeClass('catalog-goods__chevron-right--active');            // Какой класс убираем
+      }
+
+    });
+
   });
 
 
