@@ -27,7 +27,7 @@ function svg() {
     .pipe(svgo({
       plugins: [
         {
-          removeAttrs: { attrs: '(fill|srtoke|style|width|height|data.*)' }
+          removeAttrs: { attrs: '(fill|srtoke|data.*)' }
         }
       ]
     }))
@@ -82,7 +82,7 @@ function styles() {
     .pipe(scss({
       outputStyle: "compressed"
     }))
-    .pipe(concat("style.min.css"))
+    .pipe(concat("style.css"))
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 10 versions"],

@@ -43,6 +43,106 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &__navbar {
+    max-width: 170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__navbar-num {
+    position: absolute;
+    top: 3px;
+    right: 30px;
+    padding: 4px;
+    line-height: 1.1;
+    font-size: 10px;
+    color: $red-900;
+    background-color: $white;
+    border-radius: 50px;
+  }
+
+  &__navbar-item {
+    width: 50px;
+    height: 50px;
+
+    &--mobail {
+      display: none;
+    }
+  }
+}
+
+
+.universal-btn {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  outline: 0;
+  z-index: 30;
+  transition: background-color 0.2s;
+
+
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 3px $box-shadow-focus;
+    border-radius: 3px;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+
+  &::before {
+    @include pseudo;
+    width: 35px;
+    height: 32px;
+    top: 8px;
+    left: 6px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &--mobail {
+    width: 44px;
+    height: 44px;
+
+  }
+
+  &--mobail::before {
+    top: 12px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
+    background-image: url("../images/sprite.svg#search");
+  }
+
+  &--user::before {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
+    background-image: url("../images/sprite.svg#user");
+  }
+
+  &--heart::before {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
+    background-image: url("../images/sprite.svg#heart");
+  }
+
+  &--cart::before {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
+    background-image: url("../images/sprite.svg#cart");
+  }
 }
 
 .simple-menu {
@@ -54,7 +154,15 @@
 
   &__item {
     position: relative;
+
+  }
+
+  &__link {
     padding-left: 44px;
+
+    &--tel {
+      padding-left: 33px;
+    }
 
   }
 
@@ -62,14 +170,10 @@
     display: block;
     position: absolute;
     top: -4px;
-    left: -40px;
     width: 32px;
     height: 22px;
     fill: $white;
 
-    &--tel {
-      left: -31px;
-    }
   }
 }
 
@@ -100,11 +204,7 @@
 }
 
 .catalog-goods {
-  display: contents;
-
-  &__items {
-    position: relative;
-  }
+  position: relative;
 
   &__svg {
     position: absolute;
@@ -274,85 +374,6 @@
   }
 }
 
-
-
-.navbar {
-  max-width: 170px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-
-  &__num {
-    position: absolute;
-    top: 3px;
-    right: 30px;
-    padding: 4px;
-    line-height: 1.1;
-    font-size: 10px;
-    color: $red-900;
-    background-color: $white;
-    border-radius: 50px;
-  }
-}
-
-.navbar-menu {
-  width: 50px;
-  height: 50px;
-}
-
-.navbar-btn {
-  position: relative;
-  display: block;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  outline: 0;
-  z-index: 30;
-  transition: background-color 0.2s;
-
-  &:focus {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 0 0 3px $box-shadow-focus;
-    border-radius: 3px;
-  }
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-  }
-
-  &:active {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-  }
-
-  &::before {
-    @include pseudo;
-    width: 35px;
-    height: 32px;
-    top: 8px;
-    left: 6px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  &--user::before {
-    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
-    background-image: url("../images/sprite.svg#user");
-  }
-
-  &--heart::before {
-    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
-    background-image: url("../images/sprite.svg#heart");
-  }
-
-  &--cart::before {
-    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg) brightness(105%) contrast(101%);
-    background-image: url("../images/sprite.svg#cart");
-  }
-}
-
 .main-swiper {
   min-height: 600px;
   overflow: hidden;
@@ -362,19 +383,19 @@
     width: 100%;
     height: 100%;
   }
-}
 
-.swiper-slide {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 600px;
-  object-fit: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  &__slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
   &__box {
     max-width: 1241px;
@@ -505,6 +526,32 @@
   }
 }
 
+.swiper-button-disabled {
+  .swiper-button-next__svg {
+    fill: $silver-600;
+  }
+}
+
+.swiper-button-prev.swiper-button-disabled {
+  pointer-events: none;
+  background-color: $white 0.8;
+
+  .swiper-button-prev__svg {
+    fill: $silver-600;
+  }
+}
+
+.swiper-button-next.swiper-button-disabled {
+  pointer-events: none;
+  background-color: $white 0.8;
+
+  .swiper-button-next__svg {
+    fill: $silver-600;
+  }
+}
+
+
+
 .swiper-container-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
@@ -593,12 +640,22 @@
 .top-products {
   padding: 72px 0;
   text-align: center;
+
+  &__container {
+    max-width: 1350px;
+    padding: 0;
+  }
 }
 
 .filter-product-card {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 51px;
+
+  &--mb {
+    margin-bottom: 30px;
+  }
 
   &__btn {
     font-weight: 700;
@@ -629,27 +686,26 @@
   }
 }
 
-.filter__promo {
-  margin-bottom: 50px;
-}
+
 
 .product-cards {
-  &__container {
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 1350px;
-    width: 100%;
-  }
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 1350px;
+  width: 100%;
+
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 18px;
+    width: 100%;
   }
 
   &__item {
-    margin-bottom: 30px;
+    margin: 0 15px 30px 15px;
+
   }
 }
 
@@ -801,7 +857,7 @@
   left: 10px;
 }
 
-.hit {
+.badge {
   display: inline-block;
   padding: 1px 7px;
   text-align: center;
@@ -823,15 +879,6 @@
   }
 }
 
-.sale {
-  padding: 1px 7px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 10px;
-  color: $white;
-  background-color: $red-900;
-  border-radius: 6px;
-}
 
 .bt-minus {
   position: relative;
@@ -952,13 +999,17 @@
     justify-content: space-between;
   }
 
+  &__item {
+    padding: 3px 0;
+  }
+
   &__text {
     max-width: 309px;
     line-height: 1;
     margin-bottom: 14px;
 
     & p {
-      @include line-clamp(1);
+      @include line-clamp(2);
     }
   }
 
@@ -1024,7 +1075,7 @@
 
 .social {
   display: flex;
-  padding-right: 50px;
+
 
 
   &__item {
@@ -1034,7 +1085,11 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
 
     &:focus {
       box-shadow: 0 0 0 3px $green-200;
@@ -1108,6 +1163,20 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    &--big {
+      .banner__text {
+        color: $white;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+      }
+
+      .banner__title {
+        max-width: 371px;
+        color: $white;
+        text-shadow: 2px 2px 0 rgb(0 0 0 / 25%);
+        letter-spacing: 0;
+      }
+    }
   }
 
   &__text {
@@ -1115,11 +1184,9 @@
     margin-bottom: 18px;
     @include line-clamp(1);
 
-    &--big {
-      color: $white;
-      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
-    }
   }
+
+
 
   &__title {
     display: block;
@@ -1131,12 +1198,6 @@
     margin-bottom: 12px;
     @include line-clamp(2);
 
-    &--big {
-      max-width: 371px;
-      color: $white;
-      text-shadow: 2px 2px 0 rgb(0 0 0 / 25%);
-      letter-spacing: 0;
-    }
   }
 
   &__link {
@@ -1145,6 +1206,18 @@
     border-bottom: 2px solid $dark-500;
     letter-spacing: 0.2px;
     padding-bottom: 4px;
+    transition: color 0.2s, border-color 0.2s;
+
+    &:focus {
+      box-shadow: 0 0 0 2px $green-200;
+      border-radius: 2px;
+    }
+
+    &:hover {
+      color: $green-900;
+      border-color: $green-900;
+      text-shadow: none;
+    }
 
     &--big {
       max-width: 382px;
@@ -1160,9 +1233,14 @@
   padding: 72px 0;
   background-color: $silver-100;
 
+  &__container {
+    margin: 0 auto;
+    max-width: 1350px;
+  }
+
   &__cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 24px;
   }
@@ -1174,8 +1252,9 @@
 
   &__list {
     max-width: 300px;
+    margin: 0 15px 30px 15px;
     width: 100%;
-    margin-bottom: 30px;
+
   }
 }
 
@@ -1281,27 +1360,27 @@
   }
 }
 
-.container-swiper {
-  max-height: 200px;
-}
+.brends-swiper {
+  padding: 72px 0;
 
-.slide {
-  max-height: 200px;
-}
+  &__img {
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    cursor: pointer;
 
-.swiper-img {
-  opacity: 0.5;
-  transition: opacity 0.2s;
-
-  &:hover {
-    opacity: 1;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
+
+
 
 .news {
   padding: 0 0 72px;
 
   &__img {
+    border-radius: 6px 6px 0 0;
     object-fit: cover;
   }
 

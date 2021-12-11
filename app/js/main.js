@@ -12,7 +12,7 @@ let swiper = new Swiper(".main-swiper__wrapper", {
 
 
 
-let swiper1 = new Swiper(".myswiper", {
+let swiper1 = new Swiper(".brends-swiper__wrapper", {
   slidesPerView: 6,
   loop: true,
   spaceBetween: 30,
@@ -129,11 +129,11 @@ $(function () {
 
 
 
-var menu = $('.header');
-$(window).scroll(function () {
-  if ($(window).scrollTop() > 0) {
-    menu.addClass('header--fixid');
-  } else {
-    menu.removeClass('header--fixid');
-  }
-});
+// var menu = $('.header');
+// $(window).scroll(function () {
+//   if ($(window).scrollTop() > 0) {
+//     menu.addClass('header--fixid');
+//   } else {
+//     menu.removeClass('header--fixid');
+//   }
+// });
